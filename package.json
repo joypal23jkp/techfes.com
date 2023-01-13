@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "test": "vitest -c vitest.config.ts"
+  },
+  "devDependencies": {
+    "@nuxt/eslint-config": "^0.1.1",
+    "@nuxt/image": "^0.7.1",
+    "@nuxtjs/eslint-config": "^12.0.0",
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@testing-library/vue": "^6.6.1",
+    "autoprefixer": "^10.4.13",
+    "eslint": "^8.30.0",
+    "nuxt": "3.0.0",
+    "postcss": "^8.4.20",
+    "prettier": "^2.8.1",
+    "prettier-plugin-tailwindcss": "^0.2.1",
+    "tailwindcss": "^3.2.4",
+    "vitest": "^0.26.2"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.6",
+    "@vueuse/nuxt": "^9.9.0",
+    "pinceau": "^0.10.8",
+    "pinia": "^2.0.28"
+  }
+}

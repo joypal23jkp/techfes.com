@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.flex-center { @apply flex justify-center items-center }
+.flex-vertical-center { @apply flex items-center }
+
+/** {*/
+/*    margin: 0;*/
+/*    background: red;*/
+/*}*/
+
+/*------------------attributes selectors------------------*/
+
+/*li[class="first"] {*/
+/*    color: blue;*/
+/*    font-weight: bold;*/
+/*}*/
+/*li[class~="first"] {*/
+/*    color: blue;*/
+/*    font-weight: bold;*/
+/*}*/
+/*li[class*="first"] {*/
+/*    color: blue;*/
+/*    font-weight: bold;*/
+/*}*/
+/*li[class^="first-"] {*/
+/*    color: blue;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*li[class^="-first"] {*/
+/*    color: blue;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*li[class="First" i] {*/
+/*    color: blue;*/
+/*    font-weight: bold;*/
+/*}*/
+
+
+/*-----------pseudo class------------*/
+/*article ul li:first-child, li:last-child {*/
+/*    font-family: "Microsoft Sans Serif", serif;*/
+/*    font-size: 24px;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*article ul li span:only-child {*/
+/*    color: wheat;*/
+/*}*/
+
+/*article ul li:last-child {*/
+/*    font-family: "Microsoft Sans Serif", serif;*/
+/*    font-size: 24px;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*-----------combinators---------*/
+/*article ul > li {*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*article h2 + p {*/
+/*    color: white;*/
+/*}*/
+
+/*article h2 ~ p {*/
+/*    color: white;*/
+/*}*/
+
