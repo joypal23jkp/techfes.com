@@ -1,8 +1,4 @@
 <script setup lang="ts">
-
-import Testimonials from "~/components/home/Testimonials.vue";
-import Footer from "~/components/common/Footer.vue";
-
 useHead({
   title: 'TechFes | Home Page'
 })
@@ -15,8 +11,8 @@ useHead({
     <HomeProjects />
     <HomeProcess />
     <HomeClicnt />
-    <Testimonials />
+    <HomeTestimonials />
     <HomeStrategy />
-    <Footer />
+    <CommonFooter />
   </div>
 </template>

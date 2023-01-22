@@ -20,7 +20,7 @@ const style: Ref<string> = computed(() => {
 });
 </script>
 <template>
-  <div class="container mx-auto flex gap-20 py-[140px]">
+  <div class="container mx-auto flex gap-20 py-[140px] bg-[url(@/assets/img/bg.jpg)] bg-repeat-x bg-contain bg-[position-y: 90%]">
     <div class="grid grid-cols-3 w-1/2 gap-x-14">
       <CommonCard
           :class-name="style"

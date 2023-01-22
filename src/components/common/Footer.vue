@@ -2,8 +2,8 @@
 import BtnPrimary from "~/components/common/BtnPrimary.vue";
 </script>
 <template>
-  <div class="w-full h-[435px] container mx-auto relative">
-    <div class="bg-primary-400 h-[280px] w-full rounded-[32px] absolute -top-[30%] flex-vertical-center">
+  <div class="w-full h-[435px] relative bg-[url(@/assets/img/bg.jpg)]">
+    <div class="bg-primary-400 h-[280px] rounded-[32px] absolute -top-[30%] flex-vertical-center container footer-center">
       <div class="w-1/2 text-light ml-[100px] relative">
         <h5 class="font-bold text-[42px] leading-[54px]">Let’s Work Together</h5>
         <p class="leading-[26px]">Since our establishment, we have been delivering high-quality and sustainable software solutions for corporate purposes of worldwide businesses Digital Brands Products Solutions.</p>
@@ -47,7 +47,7 @@ import BtnPrimary from "~/components/common/BtnPrimary.vue";
         </BtnPrimary>
       </div>
     </div>
-    <div class="flex justify-between mb-14 pt-[200px]">
+    <div class="flex justify-between mb-14 pt-[200px] container mx-auto">
       <div class="w-1/3">
         <div class="flex mb-4">
           <img class="w-8 h-8 mr-2" src="@/assets/img/logo.png" alt="Logo">

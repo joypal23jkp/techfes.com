@@ -8,6 +8,8 @@ specifiers:
   '@pinia/nuxt': ^0.4.6
   '@testing-library/vue': ^6.6.1
   '@vueuse/nuxt': ^9.9.0
+  ag-charts-community: ^7.0.0
+  ag-charts-vue3: ^7.0.0
   autoprefixer: ^10.4.13
   eslint: ^8.30.0
   nuxt: 3.0.0
@@ -18,10 +20,13 @@ specifiers:
   prettier-plugin-tailwindcss: ^0.2.1
   tailwindcss: ^3.2.4
   vitest: ^0.26.2
+  vue-class-component: ^7.2.6
 
 dependencies:
   '@pinia/nuxt': 0.4.6
   '@vueuse/nuxt': 9.9.0_nuxt@3.0.0
+  ag-charts-community: 7.0.0
+  ag-charts-vue3: 7.0.0_etzkvti57xez7q4hoz5nocix4u
   pinceau: 0.10.8_postcss@8.4.20
   pinia: 2.0.28
 
@@ -39,6 +44,7 @@ devDependencies:
   prettier-plugin-tailwindcss: 0.2.1_prettier@2.8.1
   tailwindcss: 3.2.4_postcss@8.4.20
   vitest: 0.26.2
+  vue-class-component: 7.2.6
 
 packages:
 
@@ -1583,6 +1589,21 @@ packages:
     resolution: {integrity: sha512-7zFpHzhnqYKrkYdUjF1HI1bzd0VygEGX8lFk4k5zVMqHEoES+P+7TKI+EvLO9WVMJ8eekdO0aDEK044xTXwPPA==}
     engines: {node: '>=0.4.0'}
     hasBin: true
+
+  /ag-charts-community/7.0.0:
+    resolution: {integrity: sha512-4GPy0hj1839ffKHL/02+RLsNx1KKFwJjufqGBUVwA+5kRHU0MUQoA4Zn18h/w3zelE4iyzLtvN8+EEU66Ns9Hg==}
+    dev: false
+
+  /ag-charts-vue3/7.0.0_etzkvti57xez7q4hoz5nocix4u:
+    resolution: {integrity: sha512-FvJEpeVVLa94TB1n4hAooqKxDb5NLZMuqGlTrpaCAfjEF2qM6eySDWbsPmY1mjfBvyHhlyO5geuLIHj3iaIvYA==}
+    peerDependencies:
+      ag-charts-community: ~7.0.0
+      vue: ^3.0.0
+      vue-class-component: '>= ^8.0.0-beta.3'
+    dependencies:
+      ag-charts-community: 7.0.0
+      vue-class-component: 7.2.6
+    dev: false
 
   /agent-base/6.0.2:
     resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
@@ -6818,6 +6839,11 @@ packages:
     resolution: {integrity: sha512-43vCqTgaMXfHhtR8/VcxxWD1DgtzyvNc4wNyG5NKCIH19O1z5G9ZCRXTGEA2wifVec5PU82CkRLD2sTK9NkTdA==}
     dependencies:
       ufo: 1.0.1
+
+  /vue-class-component/7.2.6:
+    resolution: {integrity: sha512-+eaQXVrAm/LldalI272PpDe3+i4mPis0ORiMYxF6Ae4hyuCh15W8Idet7wPUEs4N4YptgFHGys4UrgNQOMyO6w==}
+    peerDependencies:
+      vue: ^2.0.0
 
   /vue-demi/0.13.11:
     resolution: {integrity: sha512-IR8HoEEGM65YY3ZJYAjMlKygDQn25D5ajNFNoKh9RSDMQtlzCxtfQjdQgv9jjK+m3377SsJXY8ysq8kLCZL25A==}

@@ -53,8 +53,9 @@ const contents = [
 const selectedContentIndex = ref(0);
 </script>
 <template>
-<div class="container mx-auto py-[100px] flex flex-center">
-  <div class="w-1/2">
+<div class="container mx-auto py-[100px] flex flex-center ">
+  <div class="bg-[url(@/assets/img/bg.jpg)] bg-repeat-x bg-contain bg-[position-y: 90%] flex">
+    <div class="w-1/2">
     <h5 class="text-base font-semibold text-primary-400">{{ section.name }}</h5>
     <div class="text-[42px] font-bold py-4" v-html="section.title" />
     <p class="text-base leading-[26px]">{{ section.details }}</p>
@@ -71,7 +72,7 @@ const selectedContentIndex = ref(0);
   </div>
   <div class="px-8 relative">
     <CommonCard
-        class-name="!w-[570px] h-[500px] flex flex-center"
+        class-name="!w-[570px] h-[500px] flex flex-center border-l border-b"
     >
       <figure class="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
         <img
@@ -116,6 +117,7 @@ const selectedContentIndex = ref(0);
         >
       </li>
     </ul>
+  </div>
   </div>
 </div>
 </template>

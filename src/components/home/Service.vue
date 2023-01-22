@@ -34,7 +34,7 @@ const services = ref([
 
 </script>
 <template>
-<div class="container mx-auto grid grid-cols-3 gap-6 py-[100px] ">
+<div class="container mx-auto grid grid-cols-3 gap-6 py-[100px] bg-[url(@/assets/img/bg.jpg)]">
   <CommonCard class-name="!w-[370px] flex-vertical-center" background-color="bg-transparent">
       <div>
         <h5 class="text-base font-semibold text-primary-400">{{ section.name }}</h5>

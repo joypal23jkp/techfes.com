@@ -21,11 +21,14 @@
     "prettier": "^2.8.1",
     "prettier-plugin-tailwindcss": "^0.2.1",
     "tailwindcss": "^3.2.4",
-    "vitest": "^0.26.2"
+    "vitest": "^0.26.2",
+    "vue-class-component": "^7.2.6"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.6",
     "@vueuse/nuxt": "^9.9.0",
+    "ag-charts-community": "^7.0.0",
+    "ag-charts-vue3": "^7.0.0",
     "pinceau": "^0.10.8",
     "pinia": "^2.0.28"
   }

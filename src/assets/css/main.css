@@ -4,6 +4,10 @@
 
 .flex-center { @apply flex justify-center items-center }
 .flex-vertical-center { @apply flex items-center }
+.footer-center {
+    left: 50%;
+    transform: translate(-50%, 0);
+}
 
 /** {*/
 /*    margin: 0;*/

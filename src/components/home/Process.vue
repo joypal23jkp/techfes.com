@@ -21,10 +21,10 @@ const contents = [
     <h5 class="text-base font-semibold text-center">{{ section.name }}</h5>
     <div class="text-[42px] font-bold leading-[40px] py-4 text-center" v-html="section.title" />
     <p class="text-center w-2/3 mx-auto">{{ section.details }}</p>
-    <div class="flex my-10">
+    <div class="flex my-10 justify-center">
       <div
           v-for="(content, index) in contents" :key="content.toString()"
-          class="circle relative -ml-1"
+          class="circle relative -ml-3"
           :class="!(index % 2) ? `rotate-180`: ``"
       >
         <img alt="circle" src="@/assets/img/circle.svg" class="h-[200px] w-[200px]">

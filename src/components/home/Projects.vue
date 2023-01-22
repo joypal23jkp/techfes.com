@@ -23,13 +23,19 @@ const contents = ref([
     details: 'Since our establishment, we have been delivering high-quality Digital Brands Products Solutions.',
     link: '/'
   },
+  {
+    img: '/_nuxt/assets/img/projects/three.png',
+    title: 'Branding Design',
+    details: 'Since our establishment, we have been delivering high-quality Digital Brands Products Solutions.',
+    link: '/'
+  },
 ])
 </script>
 <template>
 <div class="w-full mx-auto container">
   <h5 class="text-base font-semibold text-primary-400">{{ section.name }}</h5>
   <div class="text-[42px] font-bold leading-[40px] py-4" v-html="section.title" />
-  <div class="flex gap-8">
+  <div class="flex gap-8 bg-[url(@/assets/img/bg.jpg)] bg-repeat-x bg-contain bg-[position-y: 90%]">
     <CommonCard
         v-for="content in contents"
         :key="content.toString()"

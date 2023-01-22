@@ -14,7 +14,7 @@ const {
 const classList = ref(`h-[${height}] w-[${width}] ${backgroundColor} ${className}`);
 </script>
 <template>
-  <div class="rounded-[12px] border border-gray-light" :class="classList">
+  <div class="rounded-[12px]" :class="classList">
     <slot />
   </div>
 </template>
