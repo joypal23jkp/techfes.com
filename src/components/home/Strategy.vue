@@ -1,135 +1,138 @@
 <template>
-  <div class="h-[588px] w-full mt-[100px] mb-[160px]">
-    <div class="container mx-auto relative" id="canvas">
-      <svg width="100%" height="332" viewBox="0 0 932 332" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2.03308 321.145C165.66 185.356 166.218 398.661 305.181 305.409C469.578 195.09 515.004 292.431 602.61 255.658C758.522 190.213 771.333 -40.6894 929.241 9.06227" stroke="#95C4FF" stroke-width="4" stroke-linecap="round"/>
-      </svg>
+  <div class="mb-[160px] h-[750px] w-full">
+    <div
+      class="container relative mx-auto h-full w-full py-[100px]"
+      id="canvas"
+    >
+      <CommonSvgWaveLine class="z-999 absolute bottom-0" />
 
-      <div class="absolute -bottom-[150px]">
-        <svg class="-m-4" width="97" height="98" viewBox="0 0 97 98" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g filter="url(#filter0_d_161_853)">
-            <rect x="16.6646" y="18.8401" width="64.1814" height="64.1814" rx="16" fill="white"/>
-          </g>
-          <path d="M40.0284 48.5018C39.6727 48.5018 39.3313 48.5563 38.9915 48.606C39.1016 48.2341 39.2148 47.8557 39.3967 47.5158C39.5786 47.022 39.8625 46.594 40.1449 46.1627C40.381 45.6962 40.7973 45.3804 41.1036 44.9812C41.4243 44.5932 41.8614 44.3351 42.2075 44.0128C42.5473 43.6762 42.9924 43.5078 43.3465 43.2705C43.7166 43.0573 44.0389 42.8216 44.3835 42.7094L45.2433 42.3535L45.9995 42.0377L45.2258 38.9307L44.2734 39.1615C43.9687 39.2385 43.597 39.3283 43.1743 39.4357C42.7419 39.5158 42.2809 39.7355 41.7672 39.9359C41.26 40.1635 40.6729 40.3174 40.1273 40.683C39.5786 41.0325 38.9452 41.3243 38.3869 41.7924C37.8461 42.275 37.1937 42.6934 36.7119 43.3074C36.1855 43.8814 35.6654 44.4842 35.2618 45.1703C34.7944 45.8245 34.4769 46.5427 34.1419 47.2529C33.8388 47.9631 33.5948 48.6894 33.3954 49.3948C33.0173 50.8088 32.8482 52.1523 32.7828 53.3018C32.7286 54.4529 32.7605 55.41 32.8275 56.1026C32.8514 56.4297 32.8961 56.7471 32.928 56.9667L32.9678 57.2361L33.0093 57.2265C33.2931 58.5584 33.9462 59.7825 34.8933 60.757C35.8403 61.7315 37.0425 62.4167 38.3608 62.7332C39.6791 63.0497 41.0597 62.9847 42.3427 62.5456C43.6258 62.1066 44.759 61.3114 45.6112 60.2522C46.4634 59.1929 46.9997 57.9128 47.1583 56.56C47.3168 55.2072 47.091 53.8369 46.507 52.6077C45.9229 51.3784 45.0046 50.3405 43.8581 49.6139C42.7116 48.8873 41.3838 48.5017 40.0284 48.5018V48.5018ZM57.5762 48.5018C57.2205 48.5018 56.8791 48.5563 56.5393 48.606C56.6494 48.2341 56.7626 47.8557 56.9445 47.5158C57.1263 47.022 57.4103 46.594 57.6926 46.1627C57.9287 45.6962 58.3451 45.3804 58.6514 44.9812C58.972 44.5932 59.4091 44.3351 59.7553 44.0128C60.0951 43.6762 60.5402 43.5078 60.8943 43.2705C61.2644 43.0573 61.5867 42.8216 61.9312 42.7094L62.7911 42.3535L63.5472 42.0377L62.7735 38.9307L61.8212 39.1615C61.5165 39.2385 61.1448 39.3283 60.722 39.4357C60.2897 39.5158 59.8287 39.7355 59.315 39.9359C58.8093 40.1651 58.2207 40.3174 57.6751 40.6846C57.1263 41.0341 56.493 41.3259 55.9347 41.794C55.3939 42.2766 54.7414 42.695 54.2597 43.3074C53.7332 43.8814 53.2132 44.4842 52.8096 45.1703C52.3422 45.8245 52.0247 46.5427 51.6897 47.2529C51.3866 47.9631 51.1425 48.6894 50.9431 49.3948C50.5651 50.8088 50.396 52.1523 50.3306 53.3018C50.2763 54.4529 50.3082 55.41 50.3752 56.1026C50.3992 56.4297 50.4438 56.7471 50.4757 56.9667L50.5156 57.2361L50.5571 57.2265C50.8408 58.5584 51.494 59.7825 52.441 60.757C53.3881 61.7315 54.5903 62.4167 55.9086 62.7332C57.2269 63.0497 58.6074 62.9847 59.8905 62.5456C61.1736 62.1066 62.3068 61.3114 63.1589 60.2522C64.0111 59.1929 64.5475 57.9128 64.706 56.56C64.8646 55.2072 64.6387 53.8369 64.0547 52.6077C63.4707 51.3784 62.5523 50.3405 61.4058 49.6139C60.2594 48.8873 58.9316 48.5017 57.5762 48.5018V48.5018Z" fill="#D70228"/>
-          <defs>
-            <filter id="filter0_d_161_853" x="0.664612" y="0.840088" width="96.1814" height="96.1814" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-              <feOffset dy="-2"/>
-              <feGaussianBlur stdDeviation="8"/>
-              <feComposite in2="hardAlpha" operator="out"/>
-              <feColorMatrix type="matrix" values="0 0 0 0 0.583333 0 0 0 0 0.583333 0 0 0 0 0.583333 0 0 0 0.25 0"/>
-              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_161_853"/>
-              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_161_853" result="shape"/>
-            </filter>
-          </defs>
-        </svg>
-        <div class="w-[250px] relative pt-[28px]">
+      <div class="absolute bottom-0">
+        <CommonSvgApostrophe
+          fill="#D70228"
+          class="shadow-slate-700 rounded-lg bg-[#ffffff] shadow-2xl"
+        />
+        <div class="relative w-[250px] pt-[28px]">
           <h1 class="text-2xl font-bold">Strategy</h1>
-          <p>Since our establishment, we are delivering of business Digital Products Solutions.</p>
-          <span class="text-[150px] leading-[120px] font-bold absolute right-0 top-0">1</span>
+          <p class="relative z-10">
+            Since our establishment, we are delivering of business Digital
+            Products Solutions.
+          </p>
+          <gradient-text
+            starting-color="#e66465"
+            ending-color="transparent"
+            text="1"
+            class-name="absolute right-0 top-0 -z-50 text-[150px] font-bold leading-[120px]"
+          />
+        </div>
+      </div>
+      <div class="absolute bottom-[5rem] left-[30%]">
+        <CommonSvgApostrophe
+          fill="#184174"
+          class="shadow-slate-700 rounded-lg bg-[#ffffff] shadow-2xl"
+        />
+
+        <div class="relative w-[250px] pt-[28px]">
+          <h1 class="text-2xl font-bold">Strategy</h1>
+          <p>
+            Since our establishment, we are delivering of business Digital
+            Products Solutions.
+          </p>
+          <gradient-text
+            starting-color="#e66465"
+            ending-color="transparent"
+            text="2"
+            class-name="absolute right-0 top-0 -z-50 text-[150px] font-bold leading-[120px]"
+          />
         </div>
       </div>
 
-      <div class="absolute -bottom-[120px] left-[20rem]">
-        <svg class="-m-4" width="97" height="98" viewBox="0 0 97 98" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g filter="url(#filter0_d_159_852)">
-            <rect x="16.4999" y="18.8407" width="64.1814" height="64.1814" rx="16" fill="white"/>
-          </g>
-          <path d="M39.8637 48.5028C39.508 48.5028 39.1666 48.5573 38.8268 48.607C38.9368 48.235 39.0501 47.8567 39.232 47.5168C39.4138 47.023 39.6978 46.595 39.9801 46.1637C40.2162 45.6972 40.6326 45.3813 40.9389 44.9821C41.2595 44.5942 41.6966 44.336 42.0428 44.0138C42.3826 43.6771 42.8277 43.5088 43.1818 43.2715C43.5519 43.0583 43.8742 42.8226 44.2187 42.7104L45.0786 42.3545L45.8347 42.0387L45.061 38.9316L44.1087 39.1625C43.804 39.2395 43.4323 39.3292 43.0095 39.4366C42.5772 39.5168 42.1162 39.7364 41.6025 39.9369C41.0952 40.1645 40.5082 40.3184 39.9626 40.6839C39.4138 41.0334 38.7805 41.3252 38.2222 41.7934C37.6814 42.2759 37.0289 42.6944 36.5472 43.3084C36.0207 43.8823 35.5007 44.4851 35.0971 45.1713C34.6297 45.8254 34.3122 46.5437 33.9772 47.2539C33.6741 47.9641 33.43 48.6904 33.2306 49.3958C32.8526 50.8098 32.6835 52.1533 32.6181 53.3028C32.5638 54.4539 32.5957 55.411 32.6627 56.1036C32.6867 56.4306 32.7313 56.7481 32.7632 56.9677L32.8031 57.237L32.8446 57.2274C33.1283 58.5594 33.7815 59.7835 34.7285 60.758C35.6756 61.7325 36.8778 62.4176 38.1961 62.7342C39.5144 63.0507 40.8949 62.9857 42.178 62.5466C43.4611 62.1075 44.5943 61.3124 45.4464 60.2531C46.2986 59.1939 46.835 57.9138 46.9935 56.561C47.1521 55.2081 46.9262 53.8379 46.3422 52.6086C45.7582 51.3794 44.8398 50.3414 43.6933 49.6148C42.5469 48.8882 41.2191 48.5027 39.8637 48.5028ZM57.4115 48.5028C57.0557 48.5028 56.7143 48.5573 56.3745 48.607C56.4846 48.235 56.5979 47.8567 56.7797 47.5168C56.9616 47.023 57.2456 46.595 57.5279 46.1637C57.764 45.6972 58.1804 45.3813 58.4867 44.9821C58.8073 44.5942 59.2444 44.336 59.5906 44.0138C59.9304 43.6771 60.3754 43.5088 60.7296 43.2715C61.0997 43.0583 61.4219 42.8226 61.7665 42.7104L62.6263 42.3545L63.3825 42.0387L62.6088 38.9316L61.6564 39.1625C61.3517 39.2395 60.98 39.3292 60.5573 39.4366C60.125 39.5168 59.664 39.7364 59.1503 39.9369C58.6446 40.1661 58.0559 40.3184 57.5104 40.6855C56.9616 41.035 56.3283 41.3268 55.7699 41.795C55.2292 42.2775 54.5767 42.696 54.0949 43.3084C53.5685 43.8823 53.0484 44.4851 52.6448 45.1713C52.1774 45.8254 51.86 46.5437 51.525 47.2539C51.2219 47.9641 50.9778 48.6904 50.7784 49.3958C50.4003 50.8098 50.2312 52.1533 50.1658 53.3028C50.1116 54.4539 50.1435 55.411 50.2105 56.1036C50.2344 56.4306 50.2791 56.7481 50.311 56.9677L50.3509 57.237L50.3924 57.2274C50.6761 58.5594 51.3293 59.7835 52.2763 60.758C53.2233 61.7325 54.4255 62.4176 55.7438 62.7342C57.0622 63.0507 58.4427 62.9857 59.7258 62.5466C61.0089 62.1075 62.142 61.3124 62.9942 60.2531C63.8464 59.1939 64.3828 57.9138 64.5413 56.561C64.6998 55.2081 64.474 53.8379 63.89 52.6086C63.306 51.3794 62.3876 50.3414 61.2411 49.6148C60.0946 48.8882 58.7669 48.5027 57.4115 48.5028Z" fill="#184174"/>
-          <defs>
-            <filter id="filter0_d_159_852" x="0.499878" y="0.840698" width="96.1814" height="96.1814" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-              <feOffset dy="-2"/>
-              <feGaussianBlur stdDeviation="8"/>
-              <feComposite in2="hardAlpha" operator="out"/>
-              <feColorMatrix type="matrix" values="0 0 0 0 0.583333 0 0 0 0 0.583333 0 0 0 0 0.583333 0 0 0 0.25 0"/>
-              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_159_852"/>
-              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_159_852" result="shape"/>
-            </filter>
-          </defs>
-        </svg>
-        <div class="w-[250px] relative pt-[28px]">
+      <div class="absolute bottom-[16rem] left-[60%]">
+        <CommonSvgApostrophe
+          fill="#184174"
+          class="shadow-slate-700 rounded-lg bg-[#ffffff] shadow-2xl"
+        />
+        <div class="relative w-[250px] pt-[28px]">
           <h1 class="text-2xl font-bold">Strategy</h1>
-          <p>Since our establishment, we are delivering of business Digital Products Solutions.</p>
-          <span class="text-[150px] leading-[120px] font-bold absolute right-0 top-0 text-transparent text-8xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">1</span>
+          <p>
+            Since our establishment, we are delivering of business Digital
+            Products Solutions.
+          </p>
+          <gradient-text
+            starting-color="#e66465"
+            ending-color="transparent"
+            text="3"
+            class-name="absolute right-0 top-0 -z-50 text-[150px] font-bold leading-[120px]"
+          />
         </div>
       </div>
 
-      <div class="absolute -bottom-[12px] left-[42rem]">
-      <svg class="-m-4" width="97" height="98" viewBox="0 0 97 98" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g filter="url(#filter0_d_159_852)">
-          <rect x="16.4999" y="18.8407" width="64.1814" height="64.1814" rx="16" fill="white"/>
-        </g>
-        <path d="M39.8637 48.5028C39.508 48.5028 39.1666 48.5573 38.8268 48.607C38.9368 48.235 39.0501 47.8567 39.232 47.5168C39.4138 47.023 39.6978 46.595 39.9801 46.1637C40.2162 45.6972 40.6326 45.3813 40.9389 44.9821C41.2595 44.5942 41.6966 44.336 42.0428 44.0138C42.3826 43.6771 42.8277 43.5088 43.1818 43.2715C43.5519 43.0583 43.8742 42.8226 44.2187 42.7104L45.0786 42.3545L45.8347 42.0387L45.061 38.9316L44.1087 39.1625C43.804 39.2395 43.4323 39.3292 43.0095 39.4366C42.5772 39.5168 42.1162 39.7364 41.6025 39.9369C41.0952 40.1645 40.5082 40.3184 39.9626 40.6839C39.4138 41.0334 38.7805 41.3252 38.2222 41.7934C37.6814 42.2759 37.0289 42.6944 36.5472 43.3084C36.0207 43.8823 35.5007 44.4851 35.0971 45.1713C34.6297 45.8254 34.3122 46.5437 33.9772 47.2539C33.6741 47.9641 33.43 48.6904 33.2306 49.3958C32.8526 50.8098 32.6835 52.1533 32.6181 53.3028C32.5638 54.4539 32.5957 55.411 32.6627 56.1036C32.6867 56.4306 32.7313 56.7481 32.7632 56.9677L32.8031 57.237L32.8446 57.2274C33.1283 58.5594 33.7815 59.7835 34.7285 60.758C35.6756 61.7325 36.8778 62.4176 38.1961 62.7342C39.5144 63.0507 40.8949 62.9857 42.178 62.5466C43.4611 62.1075 44.5943 61.3124 45.4464 60.2531C46.2986 59.1939 46.835 57.9138 46.9935 56.561C47.1521 55.2081 46.9262 53.8379 46.3422 52.6086C45.7582 51.3794 44.8398 50.3414 43.6933 49.6148C42.5469 48.8882 41.2191 48.5027 39.8637 48.5028ZM57.4115 48.5028C57.0557 48.5028 56.7143 48.5573 56.3745 48.607C56.4846 48.235 56.5979 47.8567 56.7797 47.5168C56.9616 47.023 57.2456 46.595 57.5279 46.1637C57.764 45.6972 58.1804 45.3813 58.4867 44.9821C58.8073 44.5942 59.2444 44.336 59.5906 44.0138C59.9304 43.6771 60.3754 43.5088 60.7296 43.2715C61.0997 43.0583 61.4219 42.8226 61.7665 42.7104L62.6263 42.3545L63.3825 42.0387L62.6088 38.9316L61.6564 39.1625C61.3517 39.2395 60.98 39.3292 60.5573 39.4366C60.125 39.5168 59.664 39.7364 59.1503 39.9369C58.6446 40.1661 58.0559 40.3184 57.5104 40.6855C56.9616 41.035 56.3283 41.3268 55.7699 41.795C55.2292 42.2775 54.5767 42.696 54.0949 43.3084C53.5685 43.8823 53.0484 44.4851 52.6448 45.1713C52.1774 45.8254 51.86 46.5437 51.525 47.2539C51.2219 47.9641 50.9778 48.6904 50.7784 49.3958C50.4003 50.8098 50.2312 52.1533 50.1658 53.3028C50.1116 54.4539 50.1435 55.411 50.2105 56.1036C50.2344 56.4306 50.2791 56.7481 50.311 56.9677L50.3509 57.237L50.3924 57.2274C50.6761 58.5594 51.3293 59.7835 52.2763 60.758C53.2233 61.7325 54.4255 62.4176 55.7438 62.7342C57.0622 63.0507 58.4427 62.9857 59.7258 62.5466C61.0089 62.1075 62.142 61.3124 62.9942 60.2531C63.8464 59.1939 64.3828 57.9138 64.5413 56.561C64.6998 55.2081 64.474 53.8379 63.89 52.6086C63.306 51.3794 62.3876 50.3414 61.2411 49.6148C60.0946 48.8882 58.7669 48.5027 57.4115 48.5028Z" fill="#184174"/>
-        <defs>
-          <filter id="filter0_d_159_852" x="0.499878" y="0.840698" width="96.1814" height="96.1814" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-            <feOffset dy="-2"/>
-            <feGaussianBlur stdDeviation="8"/>
-            <feComposite in2="hardAlpha" operator="out"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0.583333 0 0 0 0 0.583333 0 0 0 0 0.583333 0 0 0 0.25 0"/>
-            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_159_852"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_159_852" result="shape"/>
-          </filter>
-        </defs>
-      </svg>
-      <div class="w-[250px] relative pt-[28px]">
-        <h1 class="text-2xl font-bold">Strategy</h1>
-        <p>Since our establishment, we are delivering of business Digital Products Solutions.</p>
-        <span class="text-[150px] leading-[120px] font-bold absolute right-0 top-0">1</span>
-      </div>
-    </div>
-
-      <div class="absolute -top-[3rem] left-[54rem]">
-        <svg class="-m-4" width="97" height="98" viewBox="0 0 97 98" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g filter="url(#filter0_d_159_852)">
-            <rect x="16.4999" y="18.8407" width="64.1814" height="64.1814" rx="16" fill="white"/>
-          </g>
-          <path d="M39.8637 48.5028C39.508 48.5028 39.1666 48.5573 38.8268 48.607C38.9368 48.235 39.0501 47.8567 39.232 47.5168C39.4138 47.023 39.6978 46.595 39.9801 46.1637C40.2162 45.6972 40.6326 45.3813 40.9389 44.9821C41.2595 44.5942 41.6966 44.336 42.0428 44.0138C42.3826 43.6771 42.8277 43.5088 43.1818 43.2715C43.5519 43.0583 43.8742 42.8226 44.2187 42.7104L45.0786 42.3545L45.8347 42.0387L45.061 38.9316L44.1087 39.1625C43.804 39.2395 43.4323 39.3292 43.0095 39.4366C42.5772 39.5168 42.1162 39.7364 41.6025 39.9369C41.0952 40.1645 40.5082 40.3184 39.9626 40.6839C39.4138 41.0334 38.7805 41.3252 38.2222 41.7934C37.6814 42.2759 37.0289 42.6944 36.5472 43.3084C36.0207 43.8823 35.5007 44.4851 35.0971 45.1713C34.6297 45.8254 34.3122 46.5437 33.9772 47.2539C33.6741 47.9641 33.43 48.6904 33.2306 49.3958C32.8526 50.8098 32.6835 52.1533 32.6181 53.3028C32.5638 54.4539 32.5957 55.411 32.6627 56.1036C32.6867 56.4306 32.7313 56.7481 32.7632 56.9677L32.8031 57.237L32.8446 57.2274C33.1283 58.5594 33.7815 59.7835 34.7285 60.758C35.6756 61.7325 36.8778 62.4176 38.1961 62.7342C39.5144 63.0507 40.8949 62.9857 42.178 62.5466C43.4611 62.1075 44.5943 61.3124 45.4464 60.2531C46.2986 59.1939 46.835 57.9138 46.9935 56.561C47.1521 55.2081 46.9262 53.8379 46.3422 52.6086C45.7582 51.3794 44.8398 50.3414 43.6933 49.6148C42.5469 48.8882 41.2191 48.5027 39.8637 48.5028ZM57.4115 48.5028C57.0557 48.5028 56.7143 48.5573 56.3745 48.607C56.4846 48.235 56.5979 47.8567 56.7797 47.5168C56.9616 47.023 57.2456 46.595 57.5279 46.1637C57.764 45.6972 58.1804 45.3813 58.4867 44.9821C58.8073 44.5942 59.2444 44.336 59.5906 44.0138C59.9304 43.6771 60.3754 43.5088 60.7296 43.2715C61.0997 43.0583 61.4219 42.8226 61.7665 42.7104L62.6263 42.3545L63.3825 42.0387L62.6088 38.9316L61.6564 39.1625C61.3517 39.2395 60.98 39.3292 60.5573 39.4366C60.125 39.5168 59.664 39.7364 59.1503 39.9369C58.6446 40.1661 58.0559 40.3184 57.5104 40.6855C56.9616 41.035 56.3283 41.3268 55.7699 41.795C55.2292 42.2775 54.5767 42.696 54.0949 43.3084C53.5685 43.8823 53.0484 44.4851 52.6448 45.1713C52.1774 45.8254 51.86 46.5437 51.525 47.2539C51.2219 47.9641 50.9778 48.6904 50.7784 49.3958C50.4003 50.8098 50.2312 52.1533 50.1658 53.3028C50.1116 54.4539 50.1435 55.411 50.2105 56.1036C50.2344 56.4306 50.2791 56.7481 50.311 56.9677L50.3509 57.237L50.3924 57.2274C50.6761 58.5594 51.3293 59.7835 52.2763 60.758C53.2233 61.7325 54.4255 62.4176 55.7438 62.7342C57.0622 63.0507 58.4427 62.9857 59.7258 62.5466C61.0089 62.1075 62.142 61.3124 62.9942 60.2531C63.8464 59.1939 64.3828 57.9138 64.5413 56.561C64.6998 55.2081 64.474 53.8379 63.89 52.6086C63.306 51.3794 62.3876 50.3414 61.2411 49.6148C60.0946 48.8882 58.7669 48.5027 57.4115 48.5028Z" fill="#184174"/>
-          <defs>
-            <filter id="filter0_d_159_852" x="0.499878" y="0.840698" width="96.1814" height="96.1814" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-              <feOffset dy="-2"/>
-              <feGaussianBlur stdDeviation="8"/>
-              <feComposite in2="hardAlpha" operator="out"/>
-              <feColorMatrix type="matrix" values="0 0 0 0 0.583333 0 0 0 0 0.583333 0 0 0 0 0.583333 0 0 0 0.25 0"/>
-              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_159_852"/>
-              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_159_852" result="shape"/>
-            </filter>
-          </defs>
-        </svg>
-        <div class="w-[250px] relative pt-[28px]">
+      <div class="absolute bottom-[30rem] right-0">
+        <CommonSvgApostrophe
+          fill="#184174"
+          class="shadow-slate-700 rounded-lg bg-[#ffffff] shadow-2xl"
+        />
+        <div class="relative w-[250px] pt-[28px]">
           <h1 class="text-2xl font-bold">Strategy</h1>
-          <p>Since our establishment, we are delivering of business Digital Products Solutions.</p>
-          <span class="text-[150px] leading-[120px] font-bold absolute right-0 top-0">1</span>
+          <p>
+            Since our establishment, we are delivering of business Digital
+            Products Solutions.
+          </p>
+          <gradient-text
+            starting-color="#e66465"
+            ending-color="transparent"
+            text="4"
+            class-name="absolute right-0 top-0 -z-50 text-[150px] font-bold leading-[120px]"
+          />
         </div>
       </div>
 
-      <div class="w-[600px] absolute -top-[100px] left-0">
-        <h5 class="text-base font-semibold text-primary-400">{{ 'Our Simple Work Process' }}</h5>
-        <div class="text-[42px] leading-10 font-bold py-4"> {{ 'Design and develop, websites & apps,  focusing on human centered design.' }} </div>
-        <p class="text-base leading-[26px]">{{ 'Since our establishment, we have been delivering high-quality and sustainable software solutions for corporate purposes of worldwide businesses Digital Brands Products Solutions.' }}</p>
+      <div class="w-[600px] lg:min-h-[500px]">
+        <h5 class="text-lg font-semibold text-primary-400">
+          Our Simple Work Process
+        </h5>
+        <div class="py-4 text-[42px] font-bold leading-tight">
+          Design and develop, websites & apps, focusing on human centered
+          design.
+        </div>
+        <p class="text-base leading-normal">
+          Since our establishment, we have been delivering high-quality and
+          sustainable software solutions for corporate purposes of worldwide
+          businesses Digital Brands Products Solutions.
+        </p>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-//
-// context.moveTo(50, 130);
-// context.bezierCurveTo(300, 50, 200, 400, 490, 100);
-// context.lineTo(490, 300);
-// context.lineTo(50, 300);
-// context.closePath();
-//
-// context.lineWidth = 15;
-// context.strokeStyle = "#FFCC00";
-// context.fillStyle = "#FFDE58";
-//
-// context.stroke();
-// context.fill();
+const GradientText = defineComponent({
+  props: {
+    startingColor: {
+      type: String,
+    },
+    endingColor: {
+      type: String,
+    },
+    className: {
+      type: String,
+      default: "",
+    },
+    text: {
+      type: String,
+      default: "",
+    },
+  },
+  setup(props) {
+    return () =>
+      h("span", {
+        class: props.className,
+        style: {
+          background: `-webkit-linear-gradient(${props.startingColor}, ${props.endingColor})`,
+          "-webkit-background-clip": "text",
+          "-webkit-text-fill-color": "transparent",
+        },
+        innerHTML: props.text,
+      });
+  },
+});
 </script>

@@ -1,76 +1,98 @@
+/* global.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .flex-center { @apply flex justify-center items-center }
 .flex-vertical-center { @apply flex items-center }
-.footer-center {
-    left: 50%;
-    transform: translate(-50%, 0);
+.footer-center {left: 50%; transform: translate(-50%, 0) }
+.absolute-vertical-center { @apply absolute left-[50%] translate-x-[-50%] }
+.absolute-horizontal-center { @apply absolute top-[50%] translate-y-[-50%] }
+
+
+@layer base {
+    :root {
+        --primary-color: #3900B4;
+        --dark-color: #091029;
+        --light-color: #ffffff;
+        --success-color: #53A451;
+        --danger-color: #CB444A;
+        --warning-color: #F6C244;
+        --info-color: #4BA0B5;
+        --orange-color: #FF6F00;
+
+        --background: 0 0% 100%;
+        --foreground: 222.2 47.4% 11.2%;
+
+        --muted: 210 40% 96.1%;
+        --muted-foreground: 215.4 16.3% 46.9%;
+
+        --popover: 0 0% 100%;
+        --popover-foreground: 222.2 47.4% 11.2%;
+
+        --border: 214.3 31.8% 91.4%;
+        --input: 214.3 31.8% 91.4%;
+
+        --card: 0 0% 100%;
+        --card-foreground: 222.2 47.4% 11.2%;
+
+        --primary: 259, 100%, 35%;
+        --primary-foreground: 0, 0%, 100%;
+
+        --secondary: 210 40% 96.1%;
+        --secondary-foreground: 222.2 47.4% 11.2%;
+
+        --accent: 210 40% 96.1%;
+        --accent-foreground: 222.2 47.4% 11.2%;
+
+        --destructive: 0 100% 50%;
+        --destructive-foreground: 210 40% 98%;
+
+        --ring: 215 20.2% 65.1%;
+
+        --radius: 0.5rem;
+    }
+
+    .dark {
+        --background: 224 71% 4%;
+        --foreground: 213 31% 91%;
+
+        --muted: 223 47% 11%;
+        --muted-foreground: 215.4 16.3% 56.9%;
+
+        --accent: 216 34% 17%;
+        --accent-foreground: 210 40% 98%;
+
+        --popover: 224 71% 4%;
+        --popover-foreground: 215 20.2% 65.1%;
+
+        --border: 216 34% 17%;
+        --input: 216 34% 17%;
+
+        --card: 224 71% 4%;
+        --card-foreground: 213 31% 91%;
+
+        --primary: 259, 100%, 35%;
+        --primary-foreground: 0, 0%, 100%;
+
+        --secondary: 222.2 47.4% 11.2%;
+        --secondary-foreground: 210 40% 98%;
+
+        --destructive: 0 63% 31%;
+        --destructive-foreground: 210 40% 98%;
+
+        --ring: 216 34% 17%;
+
+        --radius: 0.5rem;
+    }
 }
 
-/** {*/
-/*    margin: 0;*/
-/*    background: red;*/
-/*}*/
-
-/*------------------attributes selectors------------------*/
-
-/*li[class="first"] {*/
-/*    color: blue;*/
-/*    font-weight: bold;*/
-/*}*/
-/*li[class~="first"] {*/
-/*    color: blue;*/
-/*    font-weight: bold;*/
-/*}*/
-/*li[class*="first"] {*/
-/*    color: blue;*/
-/*    font-weight: bold;*/
-/*}*/
-/*li[class^="first-"] {*/
-/*    color: blue;*/
-/*    font-weight: bold;*/
-/*}*/
-
-/*li[class^="-first"] {*/
-/*    color: blue;*/
-/*    font-weight: bold;*/
-/*}*/
-
-/*li[class="First" i] {*/
-/*    color: blue;*/
-/*    font-weight: bold;*/
-/*}*/
-
-
-/*-----------pseudo class------------*/
-/*article ul li:first-child, li:last-child {*/
-/*    font-family: "Microsoft Sans Serif", serif;*/
-/*    font-size: 24px;*/
-/*    font-weight: bold;*/
-/*}*/
-
-/*article ul li span:only-child {*/
-/*    color: wheat;*/
-/*}*/
-
-/*article ul li:last-child {*/
-/*    font-family: "Microsoft Sans Serif", serif;*/
-/*    font-size: 24px;*/
-/*    font-weight: bold;*/
-/*}*/
-
-/*-----------combinators---------*/
-/*article ul > li {*/
-/*    font-weight: bold;*/
-/*}*/
-
-/*article h2 + p {*/
-/*    color: white;*/
-/*}*/
-
-/*article h2 ~ p {*/
-/*    color: white;*/
-/*}*/
-
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+}

@@ -56,12 +56,12 @@ const selectedContentIndex = ref(0);
 <div class="container mx-auto py-[100px] flex flex-center ">
   <div class="bg-[url(@/assets/img/bg.jpg)] bg-repeat-x bg-contain bg-[position-y: 90%] flex">
     <div class="w-1/2">
-    <h5 class="text-base font-semibold text-primary-400">{{ section.name }}</h5>
+    <h5 class="text-base font-semibold text-primary">{{ section.name }}</h5>
     <div class="text-[42px] font-bold py-4" v-html="section.title" />
     <p class="text-base leading-[26px]">{{ section.details }}</p>
     <div class="flex w-full pt-8">
       <div class="w-1/2">
-        <h2 class="text-4xl font-bold text-primary-400">{{ section.clientCount }}+</h2>
+        <h2 class="text-4xl font-bold text-primary">{{ section.clientCount }}+</h2>
         Our Happy Clients
       </div>
       <div class="w-1/2">
@@ -74,7 +74,7 @@ const selectedContentIndex = ref(0);
     <CommonCard
         class-name="!w-[570px] h-[500px] flex flex-center border-l border-b"
     >
-      <figure class="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
+      <figure class="rounded-xl p-8">
         <img
             class="w-24 h-24 rounded-full mx-auto"
             :src="contents[selectedContentIndex].img"

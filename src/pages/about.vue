@@ -1,56 +1,29 @@
-<script setup>
-import Table from '~/components/Table.vue';
-
-defineProps({
-  msg: String,
+opn
+<script setup lang="ts">
+useHead({
+  title: "TechFes | About Page",
 });
-
-const tableData = reactive({
-  tCols: [
-    {
-      id: 1,
-      label: 'Name',
-      key: 'name',
-    },
-    {
-      id: 2,
-      label: 'Email',
-      key: 'email',
-      rend: (row, col) => {
-        return {
-          name: 'Test',
-          props: {}
-        };
-      }
-    },
-  ],
-  tBody: [
-    {
-      id: 1,
-      name: 'faisal',
-      email: 'faisal@softzino.com',
-    },
-    {
-      id: 1,
-      name: 'faisal-',
-      email: 'faisal-@softzino.com',
-    },
-  ],
-});
-
-const count = ref(0);
-
-const Test = import('../components/Test.vue');
 </script>
-
 <template>
-  <h1>{{ msg }}</h1>
+  <div>
+    <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+      <!--      <path d="M 10 10 H 90 V 90 H 10 L 10 10" />-->
+      <!-- Points -->
+      <circle cx="10" cy="10" r="2" fill="red" />
+      <circle cx="90" cy="90" r="2" fill="red" />
+      <circle cx="90" cy="10" r="2" fill="red" />
+      <circle cx="10" cy="90" r="2" fill="red" />
 
-  <Table :t-cols="tableData.tCols" :t-body="tableData.tBody" />
+      <!--      <path-->
+      <!--        d="M 10 10 H 90 V 90 h -70  L 10 10"-->
+      <!--        fill="transparent"-->
+      <!--        stroke="black"-->
+      <!--      />-->
+      <path
+        d="M 10 10 C 20 20, 30 40, 50 10"
+        stroke="black"
+        fill="transparent"
+      />
+    </svg>
+  </div>
 </template>
-
-<style scoped>
-.read-the-docs {
-  color: #888;
-}
-</style>

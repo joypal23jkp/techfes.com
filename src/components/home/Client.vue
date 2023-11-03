@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { Ref } from "vue";
 
 const section = ref({
   name: 'Our Happy Clients',
@@ -16,18 +15,15 @@ const contents = [
   '/_nuxt/assets/img/logo/syngenta.png'
 ];
 const style: Ref<string> = computed(() => {
-  return `!w-[200px] flex-center px-3 py-6`;
+  return `!w-[200px] flex-center px-3 py-6 bg-white`;
 });
 </script>
 <template>
-  <div class="container mx-auto flex gap-20 py-[140px] bg-[url(@/assets/img/bg.jpg)] bg-repeat-x bg-contain bg-[position-y: 90%]">
+  <div
+    class="container mx-auto flex gap-20 py-[140px] bg-[url(@/assets/img/bg.jpg)] bg-repeat-x bg-contain bg-[position-y: 90%]">
     <div class="grid grid-cols-3 w-1/2 gap-x-14">
-      <CommonCard
-          :class-name="style"
-          :class="(index === 1 || index === 4) ? 'mt-[30px]': 'mb-[30px]'"
-          v-for="(content, index) in contents"
-          :key="content.toString()"
-      >
+      <CommonCard :class-name="style" :class="(index === 1 || index === 4) ? 'mt-[30px]' : 'mb-[30px]'"
+        v-for="(content, index) in contents" :key="content.toString()">
         <img :src="content" :alt="content">
       </CommonCard>
     </div>

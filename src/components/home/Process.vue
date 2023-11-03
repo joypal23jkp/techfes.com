@@ -17,7 +17,7 @@ const contents = [
 ]
 </script>
 <template>
-  <div class="w-full bg-primary-400 text-light p-[100px] my-[100px]">
+  <div class="w-full bg-primary text-primary-foreground p-[100px] my-[100px]">
     <h5 class="text-base font-semibold text-center">{{ section.name }}</h5>
     <div class="text-[42px] font-bold leading-[40px] py-4 text-center" v-html="section.title" />
     <p class="text-center w-2/3 mx-auto">{{ section.details }}</p>
