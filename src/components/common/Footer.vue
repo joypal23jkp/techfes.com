@@ -1,5 +1,5 @@
 <template>
-  <div class="relative h-[435px] w-full bg-[url(@/assets/img/bg.jpg)]">
+  <div class="relative min-h-[435px] w-full bg-[url(@/assets/img/bg.jpg)]">
     <div class="container mx-auto mb-14 flex justify-between pt-[200px] border-t">
       <CommonContainer
           class="absolute-vertical-center -top-[50%] w-full xl:rounded-[32px] px-[100px] bg-primary text-primary-foreground z-10 "
@@ -180,7 +180,7 @@
       </div>
     </div>
     <hr />
-    <h5 class="pt-1 text-center font-light">
+    <h5 class="text-center font-light py-4">
       Copyright @ 2022 Techfes. All rights reserved.
     </h5>
   </div>

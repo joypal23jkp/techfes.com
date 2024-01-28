@@ -2,9 +2,9 @@
   import BtnPrimary from "~/components/common/BtnPrimary.vue";
 
   const links = [
-    { name: 'Service', url: '/' },
-    { name: 'Works', url: '/' },
-    { name: 'About Us', url: '/' },
+    { name: 'Service', url: '/service' },
+    { name: 'Works', url: '/work' },
+    { name: 'About Us', url: '/about' },
   ];
 </script>
 <template>

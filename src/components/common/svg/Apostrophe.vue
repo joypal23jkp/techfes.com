@@ -4,14 +4,22 @@ export default defineComponent({
     fill: {
       type: String,
     },
+    width: {
+      type: Number,
+      default: 97
+    },
+    height: {
+      type: Number,
+      default: 98
+    },
   },
   setup(props) {
     return () =>
       h(
         "svg",
         {
-          width: 97,
-          height: 98,
+          width: props.width,
+          height: props.height,
           fill: "none",
           viewBox: "0 0 97 98",
           xmlns: "http://www.w3.org/2000/svg",

@@ -64,12 +64,12 @@ const services = ref([
       <div class="px-[32px] py-[52px] text-light">
         <div class="text-[46px] font-bold leading-[40px] ">0+</div>
         <div class="text-[36px] font-medium leading-[40px] py-6">See More</div>
-        <div class="w-10 h-10 flex-center bg-[#000] rounded-full">
+        <NuxtLink class="w-10 h-10 flex-center bg-[#000] rounded-full" to="/service">
           <svg width="13" height="13" class="mx-2 text-primary-400" fill="white" viewBox="0 0 13 14"
             xmlns="http://www.w3.org/2000/svg">
             <path d="M1 0.0549316V2.05493H9.59L0 11.6449L1.41 13.0549L11 3.46493V12.0549H13V0.0549316H1Z" />
           </svg>
-        </div>
+        </NuxtLink>
       </div>
     </CommonCard>
   </div>
