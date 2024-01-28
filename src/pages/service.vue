@@ -102,7 +102,7 @@ const goodDesigns = ref([
       </CommonCard>
     </div>
 
-    <div class="w-full p-[100px] my-[100px]">
+    <div class="w-full p-[100px] mb-[150px]">
       <h5 class="text-base font-semibold text-center">{{ section.name }}</h5>
       <div class="text-[42px] font-bold leading-[40px] py-4 text-center" v-html="section.title" />
       <p class="text-center w-1/2 mx-auto">{{ section.details }}</p>
