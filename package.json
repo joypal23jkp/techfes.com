@@ -23,7 +23,8 @@
     "@vueuse/nuxt": "^10.7.1",
     "arktik-component": "^0.1.0",
     "pinceau": "0.20.1",
-    "pinia": "^2.1.7"
+    "pinia": "^2.1.7",
+    "swiper": "^11.0.6"
   },
   "peerDependencies": {
     "ufo": "^1.3.2"

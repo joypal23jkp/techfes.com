@@ -3,8 +3,9 @@ interface Props {
   height?: number;
   width?: number;
   fill?: string;
+  positions: {x: number, y: number}[]
 }
-const { height = 16, width = 16, fill = "none" } = defineProps<Props>();
+const { height = 16, width = 16, fill = "none", positions = [] } = defineProps<Props>();
 </script>
 
 <template>

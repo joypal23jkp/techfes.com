@@ -1,3 +1,56 @@
+
+<script lang="ts" setup>
+import {forEach} from "@csstools/css-parser-algorithms";
+
+const GradientText = defineComponent({
+  props: {
+    startingColor: {
+      type: String,
+    },
+    endingColor: {
+      type: String,
+    },
+    className: {
+      type: String,
+      default: "",
+    },
+    text: {
+      type: String,
+      default: "",
+    },
+  },
+  setup(props) {
+    return () =>
+        h("span", {
+          class: props.className,
+          style: {
+            background: `-webkit-linear-gradient(${props.startingColor}, ${props.endingColor})`,
+            "-webkit-background-clip": "text",
+            "-webkit-text-fill-color": "transparent",
+          },
+          innerHTML: props.text,
+        });
+  },
+});
+
+const points = ref<HTMLCollectionOf<Element>>()
+const pointPosition = ref<{x: number, y: number}[]>([])
+watchEffect(() => {
+  console.log(points.value)
+})
+
+onMounted(() => {
+  points.value = document.getElementsByClassName('point')
+  if (points.value?.length) {
+    for (let i = 0; i < points.value.length; i++) {
+      const _point = points.value[i];
+      const { x, y } = _point.getClientRects().item(0)!;
+      pointPosition.value.push({ x, y });
+    }
+  }
+})
+</script>
+
 <template>
   <div class="mb-[160px] h-[750px] w-full">
     <div
@@ -8,8 +61,9 @@
 
       <div class="absolute bottom-0">
         <CommonSvgApostrophe
-          fill="#D70228"
-          class="shadow-slate-700 rounded-lg bg-[#ffffff] shadow-2xl"
+            ref="points[0]"
+            fill="#D70228"
+            class="point shadow-slate-700 rounded-lg bg-[#ffffff] shadow-2xl"
         />
         <div class="relative w-[250px] pt-[28px]">
           <h1 class="text-2xl font-bold">Strategy</h1>
@@ -27,8 +81,9 @@
       </div>
       <div class="absolute bottom-[5rem] left-[30%]">
         <CommonSvgApostrophe
-          fill="#184174"
-          class="shadow-slate-700 rounded-lg bg-[#ffffff] shadow-2xl"
+            ref="points[1]"
+            fill="#184174"
+            class="point shadow-slate-700 rounded-lg bg-[#ffffff] shadow-2xl"
         />
 
         <div class="relative w-[250px] pt-[28px]">
@@ -48,8 +103,9 @@
 
       <div class="absolute bottom-[16rem] left-[60%]">
         <CommonSvgApostrophe
-          fill="#184174"
-          class="shadow-slate-700 rounded-lg bg-[#ffffff] shadow-2xl"
+            ref="points[2]"
+            fill="#184174"
+            class="point shadow-slate-700 rounded-lg bg-[#ffffff] shadow-2xl"
         />
         <div class="relative w-[250px] pt-[28px]">
           <h1 class="text-2xl font-bold">Strategy</h1>
@@ -68,8 +124,9 @@
 
       <div class="absolute bottom-[30rem] right-0">
         <CommonSvgApostrophe
-          fill="#184174"
-          class="shadow-slate-700 rounded-lg bg-[#ffffff] shadow-2xl"
+            ref="points[3]"
+            fill="#184174"
+           class="point shadow-slate-700 rounded-lg bg-[#ffffff] shadow-2xl"
         />
         <div class="relative w-[250px] pt-[28px]">
           <h1 class="text-2xl font-bold">Strategy</h1>
@@ -103,36 +160,3 @@
     </div>
   </div>
 </template>
-
-<script lang="ts" setup>
-const GradientText = defineComponent({
-  props: {
-    startingColor: {
-      type: String,
-    },
-    endingColor: {
-      type: String,
-    },
-    className: {
-      type: String,
-      default: "",
-    },
-    text: {
-      type: String,
-      default: "",
-    },
-  },
-  setup(props) {
-    return () =>
-      h("span", {
-        class: props.className,
-        style: {
-          background: `-webkit-linear-gradient(${props.startingColor}, ${props.endingColor})`,
-          "-webkit-background-clip": "text",
-          "-webkit-text-fill-color": "transparent",
-        },
-        innerHTML: props.text,
-      });
-  },
-});
-</script>

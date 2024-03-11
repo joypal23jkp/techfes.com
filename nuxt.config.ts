@@ -1,6 +1,5 @@
 export default defineNuxtConfig({
   srcDir: "src/",
-  css: ["~/assets/css/main.css"],
   app: {
     head: {
       title: "TechFes",
@@ -18,6 +17,10 @@ export default defineNuxtConfig({
       ],
     },
   },
+  css: [
+    '~/assets/css/main.css',
+    'swiper/css'
+],
   postcss: {
     plugins: {
       tailwindcss: {},
