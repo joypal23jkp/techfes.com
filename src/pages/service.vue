@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import HeroSection from "~/components/common/HeroSection.vue";
 
-import One from '~/assets/img/one.png';
 import Two from '~/assets/img/two.png';
 import Three from '~/assets/img/three.png';
 import Four from '~/assets/img/four.png';
@@ -24,7 +23,7 @@ const services = ref([
     link: '/'
   },
   {
-    icon: One,
+    icon: Two,
     title: 'App Development',
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
     link: '/'
