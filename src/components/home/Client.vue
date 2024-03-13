@@ -1,4 +1,10 @@
 <script lang="ts" setup>
+import ac from '~/assets/img/logo/ac.png'
+import Diu from '~/assets/img/logo/diu.png'
+import Merk from '~/assets/img/logo/merk.png'
+import Jicson from '~/assets/img/logo/jicson.png'
+import Ponnomela from '~/assets/img/logo/ponnomela.png'
+import Syngenta from '~/assets/img/logo/syngenta.png'
 
 const section = ref({
   name: 'Our Happy Clients',
@@ -6,15 +12,8 @@ const section = ref({
   details: 'Since our establishment, we have been delivering high-quality and sustainable software solutions for corporate purposes of worldwide businesses Digital Brands Products Solutions.'
 })
 
-const contents = [
-  '/_nuxt/assets/img/logo/ac.png',
-  '/_nuxt/assets/img/logo/diu.png',
-  '/_nuxt/assets/img/logo/jicson.png',
-  '/_nuxt/assets/img/logo/merk.png',
-  '/_nuxt/assets/img/logo/ponnomela.png',
-  '/_nuxt/assets/img/logo/syngenta.png'
-];
-const style: Ref<string> = computed(() => {
+const contents = [ ac, Diu, Merk, Jicson, Syngenta, Ponnomela ];
+const style = computed<string>(() => {
   return `!w-[200px] flex-center px-3 py-6 bg-white`;
 });
 </script>
@@ -23,7 +22,7 @@ const style: Ref<string> = computed(() => {
     class="container mx-auto flex gap-20 py-[140px] bg-[url(@/assets/img/bg.jpg)] bg-repeat-x bg-contain bg-[position-y: 90%]">
     <div class="grid grid-cols-3 w-1/2 gap-x-14">
       <CommonCard :class-name="style" :class="(index === 1 || index === 4) ? 'mt-[30px]' : 'mb-[30px]'"
-        v-for="(content, index) in contents" :key="content.toString()">
+        v-for="(content, index) in contents" :key="index">
         <img :src="content" :alt="content">
       </CommonCard>
     </div>

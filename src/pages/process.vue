@@ -2,6 +2,11 @@
 import BtnPrimary from "~/components/common/BtnPrimary.vue";
 import HeroSection from "~/components/common/HeroSection.vue";
 
+import One from '~/assets/img/one.png';
+import Two from '~/assets/img/two.png';
+import Three from '~/assets/img/three.png';
+import Four from '~/assets/img/four.png';
+
 const section = ref({
   name: "Successful Some Projects",
   title: "Some of our Works",
@@ -9,37 +14,37 @@ const section = ref({
 
 const services = ref([
   {
-    icon: `/_nuxt/assets/img/four.png`,
+    icon: Four,
     title: 'Web Development',
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
     link: '/'
   },
   {
-    icon: `/_nuxt/assets/img/one.png`,
+    icon: One,
     title: 'App Development',
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
     link: '/'
   },
   {
-    icon: `/_nuxt/assets/img/two.png`,
+    icon: Two,
     title: 'UX/UI Design',
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
     link: '/'
   },
   {
-    icon: `/_nuxt/assets/img/three.png`,
+    icon: Three,
     title: 'Backend Development',
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
     link: '/'
   },
   {
-    icon: `/_nuxt/assets/img/three.png`,
+    icon: Three,
     title: 'Backend Development',
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
     link: '/'
   },
   {
-    icon: `/_nuxt/assets/img/three.png`,
+    icon: Three,
     title: 'Backend Development',
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
     link: '/'

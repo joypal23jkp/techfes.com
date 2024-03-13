@@ -1,19 +1,26 @@
 <script lang="ts" setup>
 import BtnPrimary from "~/components/common/BtnPrimary.vue";
 
+import Discover from '~/assets/img/process/Discover.svg'
+import Design from '~/assets/img/process/Design.svg'
+import Build from '~/assets/img/process/Build.svg'
+import test from '~/assets/img/process/test.svg'
+import Deploy from '~/assets/img/process/Deploy.svg'
+import Support from '~/assets/img/process/Support.svg'
+
 const section = ref({
   name: 'Work Process',
   title: 'UX UI & Development Process',
   details: 'We’ve Developed an accredited process to ensure your software project runs smothly. Since our establishment, we have been delivering high-quality and sustainable software solutions for corporate purposes of worldwide businesses.'
-})
+});
 
 const contents = [
-  {title: 'Discover', img: '/_nuxt/assets/img/process/Discover.svg'},
-  {title: 'Design', img: '/_nuxt/assets/img/process/Design.svg'},
-  {title: 'Build', img: '/_nuxt/assets/img/process/Build.svg'},
-  {title: 'Test', img: '/_nuxt/assets/img/process/test.svg'},
-  {title: 'Deploy', img: '/_nuxt/assets/img/process/Deploy.svg'},
-  {title: 'Support', img: '/_nuxt/assets/img/process/Support.svg'}
+  { title: 'Discover', img: Discover },
+  { title: 'Design', img: Design },
+  { title: 'Build', img: Build },
+  { title: 'Test', img: test },
+  { title: 'Deploy', img: Deploy },
+  { title: 'Support', img: Support }
 ]
 </script>
 <template>

@@ -17,6 +17,9 @@ export default defineNuxtConfig({
       ],
     },
   },
+  dir: {
+    public: 'public'
+  },
   css: [
     '~/assets/css/main.css',
     'swiper/css'

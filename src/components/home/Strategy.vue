@@ -1,6 +1,5 @@
 
 <script lang="ts" setup>
-import {forEach} from "@csstools/css-parser-algorithms";
 
 const GradientText = defineComponent({
   props: {
@@ -35,9 +34,6 @@ const GradientText = defineComponent({
 
 const points = ref<HTMLCollectionOf<Element>>()
 const pointPosition = ref<{x: number, y: number}[]>([])
-watchEffect(() => {
-  console.log(points.value)
-})
 
 onMounted(() => {
   points.value = document.getElementsByClassName('point')

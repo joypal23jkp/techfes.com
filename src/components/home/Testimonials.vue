@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import Avater from '~/assets/img/avaters/avater.png';
+
 const section = ref({
   name: 'Testimonials',
   title: `We Care About Our <br /> Customers Experience`,
@@ -11,7 +13,7 @@ const contents = [
   {
     name: 'Al Mustakin',
     designation: 'Staff Engineer, Algolia',
-    img: '/_nuxt/assets/img/avaters/avater.png',
+    img: Avater,
     comment: `“Tailwind CSS is the only framework that I've seen scale
               on large teams. It’s easy to customize, adapts to any design,
               and the build size is tiny.”`
@@ -19,7 +21,7 @@ const contents = [
   {
     name: 'Al Mustakin',
     designation: 'Staff Engineer, Algolia',
-    img: '/_nuxt/assets/img/avaters/avater.png',
+    img: Avater,
     comment: `“Tailwind CSS is the only framework that I've seen scale
               on large teams. It’s easy to customize, adapts to any design,
               and the build size is tiny.”`
@@ -27,7 +29,7 @@ const contents = [
   {
     name: 'Al Mustakin',
     designation: 'Staff Engineer, Algolia',
-    img: '/_nuxt/assets/img/avaters/avater.png',
+    img: Avater,
     comment: `“Tailwind CSS is the only framework that I've seen scale
               on large teams. It’s easy to customize, adapts to any design,
               and the build size is tiny.”`
@@ -35,7 +37,7 @@ const contents = [
   {
     name: 'Al Mustakin',
     designation: 'Staff Engineer, Algolia',
-    img: '/_nuxt/assets/img/avaters/avater.png',
+    img: Avater,
     comment: `“Tailwind CSS is the only framework that I've seen scale
               on large teams. It’s easy to customize, adapts to any design,
               and the build size is tiny.”`
@@ -43,7 +45,7 @@ const contents = [
   {
     name: 'Al Mustakin',
     designation: 'Staff Engineer, Algolia',
-    img: '/_nuxt/assets/img/avaters/avater.png',
+    img: Avater,
     comment: `“Tailwind CSS is the only framework that I've seen scale
               on large teams. It’s easy to customize, adapts to any design,
               and the build size is tiny.”`

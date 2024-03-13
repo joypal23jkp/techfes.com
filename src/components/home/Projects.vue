@@ -1,6 +1,10 @@
 <script lang="ts" setup>
 import BtnPrimary from "~/components/common/BtnPrimary.vue";
 
+import One from '~/assets/img/projects/one.svg';
+import Two from '~/assets/img/projects/two.png';
+import Three from '~/assets/img/projects/three.png';
+
 const section = ref({
   name: "Successful Some Projects",
   title: "Some of our Works",
@@ -8,28 +12,28 @@ const section = ref({
 
 const contents = ref([
   {
-    img: "/_nuxt/assets/img/projects/one.svg",
+    img: One,
     title: "Website Design",
     details:
       "Since our establishment, we have been delivering high-quality Digital Brands Products Solutions.",
     link: "/",
   },
   {
-    img: "/_nuxt/assets/img/projects/two.png",
+    img: Two,
     title: "App Design",
     details:
       "Since our establishment, we have been delivering high-quality Digital Brands Products Solutions.",
     link: "/",
   },
   {
-    img: "/_nuxt/assets/img/projects/three.png",
+    img: Three,
     title: "Branding Design",
     details:
       "Since our establishment, we have been delivering high-quality Digital Brands Products Solutions.",
     link: "/",
   },
   {
-    img: "/_nuxt/assets/img/projects/three.png",
+    img: Three,
     title: "Branding Design",
     details:
       "Since our establishment, we have been delivering high-quality Digital Brands Products Solutions.",

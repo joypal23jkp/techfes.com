@@ -1,31 +1,36 @@
 <script lang="ts" setup>
+import Four from '~/assets/img/four.png';
+import One from '~/assets/img/One.png';
+import Two from '~/assets/img/two.png';
+import Three from '~/assets/img/three.png';
+
 const section = ref({
   name: 'Our Services',
   title: `Provide <span class="text-primary-200">Solutions</span>`,
   details: 'Since our establishment, we have been delivering high-quality and sustainable software solutions for corporate purposes of worldwide businesses Digital Brands Products Solutions.'
-})
+});
 
 const services = ref([
   {
-    icon: `/_nuxt/assets/img/four.png`,
+    icon: Four,
     title: 'Web Development',
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
     link: '/'
   },
   {
-    icon: `/_nuxt/assets/img/one.png`,
+    icon: One,
     title: 'App Development',
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
     link: '/'
   },
   {
-    icon: `/_nuxt/assets/img/two.png`,
+    icon: Two,
     title: 'UX/UI Design',
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
     link: '/'
   },
   {
-    icon: `/_nuxt/assets/img/three.png`,
+    icon: Three,
     title: 'Backend Development',
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
     link: '/'

@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import HeroSection from "~/components/common/HeroSection.vue";
 
+import One from '~/assets/img/one.png';
+import Two from '~/assets/img/two.png';
+import Three from '~/assets/img/three.png';
+import Four from '~/assets/img/four.png';
+
 useHead({
   title: 'TechFes | Home Page'
 });
@@ -13,37 +18,37 @@ const section = ref({
 
 const services = ref([
   {
-    icon: `/_nuxt/assets/img/four.png`,
+    icon: Four,
     title: 'Web Development',
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
     link: '/'
   },
   {
-    icon: `/_nuxt/assets/img/one.png`,
+    icon: One,
     title: 'App Development',
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
     link: '/'
   },
   {
-    icon: `/_nuxt/assets/img/two.png`,
+    icon: Two,
     title: 'UX/UI Design',
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
     link: '/'
   },
   {
-    icon: `/_nuxt/assets/img/three.png`,
+    icon: Three,
     title: 'Backend Development',
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
     link: '/'
   },
   {
-    icon: `/_nuxt/assets/img/three.png`,
+    icon: Three,
     title: 'Backend Development',
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
     link: '/'
   },
   {
-    icon: `/_nuxt/assets/img/three.png`,
+    icon: Three,
     title: 'Backend Development',
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
     link: '/'
@@ -52,22 +57,22 @@ const services = ref([
 
 const goodDesigns = ref([
   {
-    icon: `/_nuxt/assets/img/four.png`,
+    icon: Four,
     title: 'Web Development',
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
   },
   {
-    icon: `/_nuxt/assets/img/one.png`,
+    icon: One,
     title: 'App Development',
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
   },
   {
-    icon: `/_nuxt/assets/img/two.png`,
+    icon: Two,
     title: 'UX/UI Design',
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
   },
   {
-    icon: `/_nuxt/assets/img/three.png`,
+    icon: Three,
     title: 'Backend Development',
     details: 'We make applications efficient, task-focused and mission-driven so that users can achieve their tasks with minimal time and effort.',
   }
