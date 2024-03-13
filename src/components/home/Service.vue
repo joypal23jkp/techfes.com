@@ -6,6 +6,7 @@ import Three from '~/assets/img/three.png';
 
 const section = ref({
   name: 'Our Services',
+  link: '/',
   title: `Provide <span class="text-primary-200">Solutions</span>`,
   details: 'Since our establishment, we have been delivering high-quality and sustainable software solutions for corporate purposes of worldwide businesses Digital Brands Products Solutions.'
 });
