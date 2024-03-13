@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import Four from '~/assets/img/four.png';
-import One from '~/assets/img/One.png';
+import One from '~/assets/img/one.png';
 import Two from '~/assets/img/two.png';
 import Three from '~/assets/img/three.png';
 
