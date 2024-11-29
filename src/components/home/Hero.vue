@@ -12,13 +12,27 @@
 </script>
 <template>
   <div class="bg-[url(@/assets/img/background.jpg)] bg-cover bg-center">
-    <div class="w-full h-[750px] flex-vertical-center container mx-auto text-primary">
-      <div class="w-6/12">
+
+<!--    mobile-->
+    <div class="w-full container mx-auto text-primary flex flex-col gap-8 lg:hidden">
+      <div class="w-full lg:w-6/12 flex flex-col items-center">
+        <h1 class="text-4xl leading-normal text-center" v-html="content.title" />
+        <p class="leading-[24px] pt-8 pb-10 text-center">{{ content.description }}</p>
+        <BtnPrimary name="Let's Talk" link="/" />
+      </div>
+      <div class="w-full lg:w-1/2 flex justify-center">
+        <img src="@/assets/img/hero_illustrator.svg" alt="hero illustrator">
+      </div>
+    </div>
+
+<!--    desktop-->
+    <div class="w-full h-[750px] container mx-auto text-primary hidden lg:flex items-center">
+      <div class="w-full lg:w-6/12">
         <h1 class="text-[44px] leading-[64px] font-bold" v-html="content.title" />
         <p class="leading-[24px] pt-8 pb-10">{{ content.description }}</p>
         <BtnPrimary name="Let's Talk" link="/" />
       </div>
-      <div class="w-1/2 flex justify-end">
+      <div class="w-full lg:w-1/2 flex justify-end">
         <img src="@/assets/img/hero_illustrator.svg" alt="hero illustrator">
       </div>
     </div>

@@ -1,9 +1,7 @@
 <template>
   <div class="relative min-h-[435px] w-full bg-[url(@/assets/img/bg.jpg)]">
-    <div class="container mx-auto mb-14 flex justify-between pt-[200px] border-t">
-      <CommonContainer
-          class="absolute-vertical-center -top-[50%] w-full xl:rounded-[32px] px-[100px] bg-primary text-primary-foreground z-10 "
-      >
+    <div class="container mx-auto mb-14 lg:flex justify-between pt-[200px] grid gap-10">
+      <CommonContainer class="absolute-vertical-center -top-[50%] w-full lg:rounded-[32px] px-[100px] bg-primary text-primary-foreground z-10 hidden lg:block">
         <div class="flex-vertical-center relative h-full w-full justify-between">
           <div class="w-1/2">
             <h1 class="text-4xl font-bold leading-relaxed">
@@ -16,9 +14,7 @@
             </p>
           </div>
 
-          <span class="absolute right-10 top-10">
-          <RollingArrow />
-        </span>
+          <RollingArrow class="absolute right-10 top-10" />
 
           <CommonBtnPrimary
               name="Say Hello"
@@ -31,47 +27,37 @@
           </CommonBtnPrimary>
         </div>
       </CommonContainer>
-      <div class="w-1/3">
-        <div class="mb-4 flex">
+
+
+      <div class="text-center lg:text-left lg:w-1/3 flex flex-col justify-center items-center lg:items-start">
+        <div class="mb-4 flex justify-center items-center">
           <img class="mr-2 h-8 w-8" src="@/assets/img/logo.png" alt="Logo" />
           <h5 class="mx-2 text-4xl font-bold leading-9">Techfes</h5>
         </div>
         <p>
-          Since our establishment, we have been delivering solutions for
-          purposes businesses.
+          Techfes is a dynamic software design and development company dedicated to delivering innovative solutions tailored to meet the unique needs of our clients.
         </p>
       </div>
-      <div class="flex w-2/3 justify-evenly text-base font-light">
-        <ul>
-          <li class="mb-4">
+
+      <div class="grid grid-cols-3 lg:col-span-2 gap-8 justify-evenly text-base font-light text-center lg:text-start">
             <NuxtLink to="/"> UI/UX Design </NuxtLink>
-          </li>
-          <li class="mb-4">
+
             <NuxtLink to="/"> App Design </NuxtLink>
-          </li>
-          <li class="mb-4">
+
             <NuxtLink to="/"> Landing Page </NuxtLink>
-          </li>
-          <li class="mb-4">
+
             <NuxtLink to="/"> Branding Design </NuxtLink>
-          </li>
-        </ul>
-        <ul>
-          <li class="mb-4">
+
             <NuxtLink to="/"> Web Development </NuxtLink>
-          </li>
-          <li class="mb-4">
+
             <NuxtLink to="/"> App Development </NuxtLink>
-          </li>
-          <li class="mb-4">
+
             <NuxtLink to="/"> Backend Development </NuxtLink>
-          </li>
-          <li class="mb-4">
+
             <NuxtLink to="/"> Support Services </NuxtLink>
-          </li>
-        </ul>
       </div>
-      <div class="w-1/3">
+
+      <div class="flex flex-col items-center lg:items-start">
         <h5 class="mb-6 text-xl font-medium">Stay Connected</h5>
         <ul class="flex gap-2">
           <li>
@@ -178,6 +164,7 @@
           </li>
         </ul>
       </div>
+
     </div>
     <hr />
     <h5 class="text-center font-light py-4">

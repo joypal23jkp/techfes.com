@@ -61,7 +61,7 @@ const goodDesigns = ref([
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
   },
   {
-    icon: One,
+    icon: Two,
     title: 'App Development',
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
   },

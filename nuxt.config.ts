@@ -1,5 +1,6 @@
 export default defineNuxtConfig({
   srcDir: "src/",
+
   app: {
     head: {
       title: "TechFes",
@@ -17,19 +18,23 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   dir: {
     public: 'public'
   },
+
   css: [
     '~/assets/css/main.css',
     'swiper/css'
 ],
+
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
+
   components: {
     dirs: [
       {
@@ -39,16 +44,18 @@ export default defineNuxtConfig({
       "~/components",
     ],
   },
-  modules: [
-    "@vueuse/nuxt",
-    [
-      "@pinia/nuxt",
-      {
-        autoImport: ["defineStore", "acceptHMRUpdate"],
-      },
-    ],
-    "pinceau/nuxt",
-  ],
+
+  image: {
+    provider: 'ipx'
+  },
+
+  modules: ["@vueuse/nuxt", "nuxt-swiper", [
+    "@pinia/nuxt",
+    {
+      autoImport: ["defineStore", "acceptHMRUpdate"],
+    },
+  ], "pinceau/nuxt", "@nuxt/image"],
+
   typescript: {
     strict: true,
     tsConfig: {
@@ -57,4 +64,18 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  $development: {
+    devtools: {
+      enabled: true
+    }
+  },
+
+  $production: {
+    routeRules: {
+      '/**': { isr: true }
+    }
+  },
+
+  compatibilityDate: "2024-11-27"
 });
