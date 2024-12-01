@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import HeroSection from "~/components/common/HeroSection.vue";
 
-import Two from '~/assets/img/two.png';
-import Three from '~/assets/img/three.png';
-import Four from '~/assets/img/four.png';
-
 useHead({
   title: 'TechFes | Home Page'
 });
@@ -17,37 +13,37 @@ const section = ref({
 
 const services = ref([
   {
-    icon: Four,
+    icon: '/img/two.png',
     title: 'Web Development',
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
     link: '/'
   },
   {
-    icon: Two,
+    icon: '/img/three.png',
     title: 'App Development',
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
     link: '/'
   },
   {
-    icon: Two,
+    icon: '/img/four.png',
     title: 'UX/UI Design',
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
     link: '/'
   },
   {
-    icon: Three,
+    icon: '/img/two.png',
     title: 'Backend Development',
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
     link: '/'
   },
   {
-    icon: Three,
+    icon: '/img/three.png',
     title: 'Backend Development',
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
     link: '/'
   },
   {
-    icon: Three,
+    icon: '/img/four.png',
     title: 'Backend Development',
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
     link: '/'
@@ -56,22 +52,22 @@ const services = ref([
 
 const goodDesigns = ref([
   {
-    icon: Four,
+    icon: '/img/two.png',
     title: 'Web Development',
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
   },
   {
-    icon: Two,
+    icon: '/img/three.png',
     title: 'App Development',
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
   },
   {
-    icon: Two,
+    icon: '/img/four.png',
     title: 'UX/UI Design',
     details: 'Since our establishment, we have been delivering high-quality software solutions of worldwide businesses.',
   },
   {
-    icon: Three,
+    icon: '/img/one.png',
     title: 'Backend Development',
     details: 'We make applications efficient, task-focused and mission-driven so that users can achieve their tasks with minimal time and effort.',
   }

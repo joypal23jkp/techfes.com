@@ -1,39 +1,30 @@
 <script setup lang="ts">
 import HeroSection from "~/components/common/HeroSection.vue";
 
-import One from '~/assets/img/projects/one.svg';
-import Two from '~/assets/img/projects/two.png';
-import Three from '~/assets/img/projects/three.png';
-
-const section = ref({
-  name: "Successful Some Projects",
-  title: "Some of our Works",
-});
-
 const contents = ref([
   {
-    img: One,
+    img: '/img/projects/one.svg',
     title: "Website Design",
     details:
         "Since our establishment, we have been delivering high-quality Digital Brands Products Solutions.",
     link: "/",
   },
   {
-    img: Two,
+    img: '/img/projects/one.svg',
     title: "App Design",
     details:
         "Since our establishment, we have been delivering high-quality Digital Brands Products Solutions.",
     link: "/",
   },
   {
-    img: Three,
+    img: '/img/projects/one.svg',
     title: "Branding Design",
     details:
         "Since our establishment, we have been delivering high-quality Digital Brands Products Solutions.",
     link: "/",
   },
   {
-    img: Three,
+    img: '/img/projects/one.svg',
     title: "Branding Design",
     details:
         "Since our establishment, we have been delivering high-quality Digital Brands Products Solutions.",
