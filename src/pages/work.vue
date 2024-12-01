@@ -37,20 +37,20 @@ const contents = ref([
       hero-title="Our Works"
       description="Since our establishment, we have been delivering high-quality and sustainable software solutions worldwide businesses Digital Brands Products Solutions."
   />
-  <div class="container mx-auto w-full my-[100px] pb-[150px]">
-    <div class="bg-[position-y: 90%] gap-8 bg-[url(@/assets/img/bg.jpg)] bg-contain bg-repeat-x">
+  <div class="container mx-auto w-full my-[100px] lg:pb-[150px]">
+    <div class="bg-[position-y: 90%] gap-8 bg-[url(/img/bg.jpg)] bg-contain bg-repeat-x">
       <CommonCard
           v-for="(content, i) in contents"
           :key="content.toString()"
           class-name="my-[24px] p-[24px] bg-white"
       >
-        <div :class="['flex', 'items-center', 'gap-[30px]', { 'flex-row-reverse': i%2 === 0 }]">
-          <img :src="content.img" :alt="content.title" class="h-[410px] w-[546px]" />
-          <section class="card-body">
+        <div :class="['flex', 'items-center', 'gap-[30px]', { 'md:flex-row': true, 'md:flex-row-reverse': i%2 === 0, 'flex-col-reverse': true }]">
+          <img :src="content.img" :alt="content.title" class="h-auto w-auto" />
+          <section class="card-body text-center md:text-left">
             <h2 class="pt-4 text-[2rem] font-bold leading-[40px]">
               {{ content.title }}
             </h2>
-            <p class="py-2 text-base leading-[26px] w-2/3">{{ content.details }}</p>
+            <p class="py-2 text-base leading-[26px] lg:w-2/3">{{ content.details }}</p>
           </section>
         </div>
       </CommonCard>

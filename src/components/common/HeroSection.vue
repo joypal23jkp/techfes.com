@@ -7,7 +7,11 @@
 </script>
 <template>
   <div class="relative text-white">
-    <section class="h-[300px] bg-blue-900">
+    <section class="w-full min-h-[400px] bg-blue-900 relative">
+      <section class="absolute w-full lg:w-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <h1 class="text-center text-[44px] font-bold">{{ props.heroTitle }}</h1>
+          <p class="text-center leading-loose">{{ props.description }}</p>
+      </section>
       <svg  class="absolute -top-20" width="421" height="363" viewBox="0 0 421 363" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect opacity="0.1" x="-216.304" y="84.1077" width="244.385" height="645.284" rx="122.192" transform="rotate(-60 -216.304 84.1077)" fill="url(#paint0_linear_532_1467)"/>
         <defs>
@@ -38,7 +42,7 @@
         </defs>
       </svg>
 
-      <svg  class="absolute -top-20 -right-20" width="525" height="316" viewBox="0 0 525 316" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg class="absolute -top-20 right-0" width="525" height="316" viewBox="0 0 525 316" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect opacity="0.1" x="514.836" y="-173.644" width="244.385" height="645.284" rx="122.192" transform="rotate(60 514.836 -173.644)" fill="url(#paint0_linear_532_1468)"/>
         <defs>
           <linearGradient id="paint0_linear_532_1468" x1="779.941" y1="254.442" x2="558.156" y2="250.304" gradientUnits="userSpaceOnUse">
@@ -47,10 +51,6 @@
           </linearGradient>
         </defs>
       </svg>
-    </section>
-    <section class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-      <h1 class="text-center text-[44px] font-bold">{{ props.heroTitle }}</h1>
-      <p class="text-center leading-loose">{{ props.description }}</p>
     </section>
   </div>
 </template>

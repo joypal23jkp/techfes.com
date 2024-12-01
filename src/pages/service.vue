@@ -78,10 +78,11 @@ const goodDesigns = ref([
   <div>
     <HeroSection
         hero-title="Provide Solutions"
-        description="Since our establishment, we have been delivering high-quality and sustainable software solutions worldwide businesses Digital Brands Products Solutions."
+        description="Since our establishment, we have been delivering high-quality and sustainable
+        software solutions worldwide businesses Digital Brands Products Solutions."
     />
 
-    <div class="container mx-auto grid grid-cols-3 gap-6 py-[100px] bg-[url(@/assets/img/bg.jpg)]">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-[100px] bg-[url(@/assets/img/bg.jpg)]">
       <CommonCard
           v-for="service in services"
           :key="service.toString()"
@@ -102,11 +103,12 @@ const goodDesigns = ref([
       </CommonCard>
     </div>
 
-    <div class="w-full p-[100px] mb-[150px]">
+    <div class="w-full pt-100 lg:p-[100px] lg:mb-[150px]">
       <h5 class="text-base font-semibold text-center">{{ section.name }}</h5>
       <div class="text-[42px] font-bold leading-[40px] py-4 text-center" v-html="section.title" />
-      <p class="text-center w-1/2 mx-auto">{{ section.details }}</p>
-      <div class="container mx-auto flex gap-10 py-[100px] bg-[url(@/assets/img/bg.jpg)]">
+      <p class="text-center mx-4 lg:w-1/2 lg:mx-auto">{{ section.details }}</p>
+
+      <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-[100px] bg-[url(@/assets/img/bg.jpg)]">
         <CommonCard
             v-for="design in goodDesigns"
             :key="design.toString()"

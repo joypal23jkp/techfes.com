@@ -14,8 +14,8 @@ useHead({
       description="Since our establishment, we have been delivering high-quality and sustainable software solutions worldwide businesses Digital Brands Products Solutions."
   />
 
-  <section class="flex mt-[100px] pb-[400px] container gap-8 bg-[url(@/assets/img/bg.jpg)]">
-    <div class="card-section grid grid-cols-2 gap-8">
+  <section class="flex flex-col lg:flex-row mt-[100px] lg:pb-[400px] container gap-8 bg-[url(@/assets/img/bg.jpg)]">
+    <div class="card-section grid grid-cols-1 md:grid-cols-2 gap-8">
       <CommonCard
           class-name="!w-full flex-vertical-center py-14 px-7 !bg-white"
       >
