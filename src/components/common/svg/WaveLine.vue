@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import {BaseSVG, SVGPath} from "~/components/common/svg/index";
-
 
 const emits = defineEmits<{
   (e: 'onSegmentPointInitialized', payload: DOMPoint[]): void
@@ -46,16 +44,16 @@ const generatePath = () => {
   return _path;
 };
 
-function getSVGElementCoordinates(svgElement: SVGElement) {
-  const bbox = svgElement.getBoundingClientRect();
-  const svg = svgElement.ownerSVGElement;
-  const ctm = svg.getScreenCTM();
-
-  const x = (bbox.left - ctm.e) / ctm.a;
-  const y = (bbox.top - ctm.f) / ctm.d;
-
-  return { x, y };
-}
+// function getSVGElementCoordinates(svgElement: SVGElement) {
+//   const bbox = svgElement.getBoundingClientRect();
+//   const svg = svgElement.ownerSVGElement;
+//   const ctm = svg.getScreenCTM();
+//
+//   const x = (bbox.left - ctm.e) / ctm.a;
+//   const y = (bbox.top - ctm.f) / ctm.d;
+//
+//   return { x, y };
+// }
 
 
 const segmentedLineElement = (count: number) => {
@@ -105,28 +103,40 @@ function findThirdPosition(position1: Position, position2: Position, degree: num
 }
 
 onMounted(() => {
-  lineBrokenPoints.value = segmentedLineElement(1);
+  lineBrokenPoints.value = segmentedLineElement(3);
   path.value = generatePath();
+
 });
 
 watch([controlDegree], () => {
   path.value = generatePath();
 });
+
+const viewPort = ref("0 0 1536 750");
+
+onUpdated(() => {
+  console.log((useAttrs()?.canvasBoundary as DOMRect).height)
+  if (useAttrs()?.canvasBoundary) {
+    viewPort.value = `0 0 ${(useAttrs()?.canvasBoundary as DOMRect).width } ${(useAttrs()?.canvasBoundary as DOMRect).height}`;
+  }
+  viewPort.value = "0 0 1536 750";
+})
 </script>
 
 <template>
-  <BaseSVG class="svg-path-wave-line border absolute" viewBox="0 0 800 300">
-    <line ref="lineElement" v-bind="$attrs" stroke="none" />
-    <circle v-for="breakPoint in lineBrokenPoints" :key="breakPoint" :cx="breakPoint.x" :cy="breakPoint.y" r="5" />
-<!--    <path ref="wavePathElement"-->
-<!--          stroke="black"-->
-<!--          fill="none"-->
-<!--          :d="path"-->
-<!--          :key="path"-->
-<!--          style="transition-duration: 1s"-->
-<!--    >-->
-<!--    </path>-->
-  </BaseSVG>
+  <svg class="svg-path-wave-line border absolute" :viewBox="viewPort" style="border: 1px solid; width: 100%; height: 100%;">
+
+    <line ref="lineElement" v-bind="$attrs" stroke="red" />
+    <circle v-for="(breakPoint, index) in lineBrokenPoints" :key="index" :cx="breakPoint.x" :cy="breakPoint.y" r="5" />
+    <path ref="wavePathElement"
+          fill="none"
+          stroke-width="5"
+          stroke="#95c4ff"
+          :d="$attrs.path"
+          :key="path"
+          style="transition-duration: 1s"
+    />
+  </svg>
 </template>
 
 <style scoped></style>

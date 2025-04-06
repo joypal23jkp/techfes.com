@@ -25,8 +25,9 @@ export default defineNuxtConfig({
 
   css: [
     '~/assets/css/main.css',
+    '~/assets/css/svg-animations.css',
     'swiper/css'
-],
+  ],
 
   postcss: {
     plugins: {
@@ -54,7 +55,14 @@ export default defineNuxtConfig({
     {
       autoImport: ["defineStore", "acceptHMRUpdate"],
     },
-  ], "pinceau/nuxt", "@nuxt/image"],
+  ], "pinceau/nuxt", "@nuxt/image", '@hypernym/nuxt-gsap'],
+
+  gsap: {
+    composables: true,
+    extraPlugins: {
+      text: true
+    }
+  },
 
   typescript: {
     strict: true,

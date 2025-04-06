@@ -10,7 +10,7 @@ useSmoothScroll();
   <HomeHero class="px-4 lg:px-6" />
   <HomeService />
   <HomeProjects />
-<!--  <HomeProcess />-->
+  <HomeProcess />
   <HomeClient />
   <HomeTestimonials />
   <HomeStrategy class="mb-[500px]" />

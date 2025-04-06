@@ -1,178 +1,309 @@
 <template>
-  <div class="relative min-h-[435px] w-full bg-[url(@/assets/img/bg.jpg)]">
-    <div class="container mx-auto mb-14 lg:flex justify-between pt-[200px] grid gap-10">
-      <CommonContainer class="absolute-vertical-center -top-[50%] w-full lg:rounded-[32px] px-[100px] bg-primary text-primary-foreground z-10 hidden lg:block">
-        <div class="flex-vertical-center relative h-full w-full justify-between">
-          <div class="w-1/2">
-            <h1 class="text-4xl font-bold leading-relaxed">
-              Let's Work Together
-            </h1>
-            <p class="text-lg font-light leading-relaxed">
-              Since our establishment, we have been delivering high-quality and
-              sustainable software solutions for corporate purposes of worldwide
-              businesses Digital Brands Products Solutions.
-            </p>
-          </div>
-
-          <RollingArrow class="absolute right-10 top-10" />
-
+  <div class="relative w-full bg-gradient-to-b from-gray-50 to-gray-100 pt-16">
+    <!-- "Let's Work Together" Section - Floating Card -->
+    <div class="container mx-auto px-4 relative">
+      <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 lg:p-12 transform -translate-y-20 flex flex-col lg:flex-row items-center gap-8 z-20">
+        <div class="lg:w-2/3">
+          <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Let's Work Together</h2>
+          <p class="text-gray-600 mb-6 lg:pr-12">
+            Ready to transform your ideas into reality? We're excited to hear about your project and explore how we can help you achieve your goals.
+          </p>
+        </div>
+        <div class="lg:w-1/3 flex justify-center lg:justify-end">
           <CommonBtnPrimary
-              name="Say Hello"
-              link="/"
-              class-name="!w-[180px] rounded border-[0.5px] border-[#ffffff2b] bg-white !text-primary"
+            name="Start a Project"
+            link="/contact-us"
+            class-name="!w-auto px-8 py-4 rounded-lg bg-primary hover:bg-primary-600 transition-all duration-300 group"
           >
             <template #icon>
-              <Arrow />
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
             </template>
           </CommonBtnPrimary>
         </div>
-      </CommonContainer>
-
-
-      <div class="text-center lg:text-left lg:w-1/3 flex flex-col justify-center items-center lg:items-start">
-        <div class="mb-4 flex justify-center items-center">
-          <img class="mr-2 h-8 w-8" src="@/assets/img/logo.png" alt="Logo" />
-          <h5 class="mx-2 text-4xl font-bold leading-9">Techfes</h5>
-        </div>
-        <p>
-          Techfes is a dynamic software design and development company dedicated to delivering innovative solutions tailored to meet the unique needs of our clients.
-        </p>
       </div>
-
-      <div class="grid grid-cols-3 lg:col-span-2 gap-8 justify-evenly text-base font-light text-center lg:text-start">
-            <NuxtLink to="/"> UI/UX Design </NuxtLink>
-
-            <NuxtLink to="/"> App Design </NuxtLink>
-
-            <NuxtLink to="/"> Landing Page </NuxtLink>
-
-            <NuxtLink to="/"> Branding Design </NuxtLink>
-
-            <NuxtLink to="/"> Web Development </NuxtLink>
-
-            <NuxtLink to="/"> App Development </NuxtLink>
-
-            <NuxtLink to="/"> Backend Development </NuxtLink>
-
-            <NuxtLink to="/"> Support Services </NuxtLink>
-      </div>
-
-      <div class="flex flex-col items-center lg:items-start">
-        <h5 class="mb-6 text-xl font-medium">Stay Connected</h5>
-        <ul class="flex gap-2">
-          <li>
-            <NuxtLink>
-              <svg
-                width="24"
-                height="25"
-                viewBox="0 0 24 25"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 0.214844C5.37275 0.214844 0.000732422 5.58686 0.000732422 12.2141C0.000732422 18.8413 5.37275 24.2133 12 24.2133C18.6272 24.2133 23.9992 18.8413 23.9992 12.2141C24.0007 5.58686 18.6272 0.214844 12 0.214844ZM15.1837 12.2025C14.5191 12.2025 13.8646 12.2025 13.1565 12.2025C13.1565 14.7013 13.1565 17.1493 13.1565 19.6394C12.1059 19.6394 11.109 19.6394 10.0497 19.6394C10.0497 17.1827 10.0497 14.7332 10.0497 12.2475C9.52437 12.2475 9.05857 12.2475 8.55213 12.2475C8.55213 11.3855 8.55213 10.5598 8.55213 9.66593C9.02519 9.66593 9.50406 9.66593 10.0439 9.66593C10.0439 9.25527 10.0395 8.9099 10.0453 8.56454C10.0526 8.19886 10.0555 7.83173 10.0845 7.4675C10.2064 5.91626 11.0567 4.98174 12.6109 4.83228C13.5236 4.74521 14.4509 4.81632 15.4188 4.81632C15.4188 5.66231 15.4188 6.46043 15.4188 7.3398C14.9777 7.3398 14.5496 7.32819 14.1229 7.3427C13.3306 7.36882 13.1376 7.57053 13.1304 8.35122C13.126 8.76624 13.1304 9.18126 13.1304 9.65577C13.9169 9.65577 14.657 9.65577 15.4493 9.65577C15.3578 10.5322 15.2737 11.342 15.1837 12.2025Z"
-                  fill="#363636"
-                />
-              </svg>
-            </NuxtLink>
-          </li>
-          <li>
-            <NuxtLink>
-              <svg
-                width="24"
-                height="25"
-                viewBox="0 0 24 25"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M11.9992 0.214844C5.372 0.214844 -0.000732422 5.58757 -0.000732422 12.2148C-0.000732422 18.842 5.372 24.2148 11.9992 24.2148C18.6265 24.2148 23.9992 18.842 23.9992 12.2148C23.9992 5.58757 18.6265 0.214844 11.9992 0.214844ZM17.7126 14.7218C17.5303 15.838 16.9692 16.315 15.8209 16.321C13.2818 16.337 10.7447 16.337 8.20566 16.321C7.01327 16.313 6.46217 15.8541 6.27981 14.6657C6.0253 13.0044 6.02731 11.331 6.29384 9.66772C6.46217 8.61762 7.03331 8.13065 8.09343 8.11262C9.40405 8.08857 10.7147 8.1066 12.0273 8.1066C12.0273 8.1046 12.0273 8.10059 12.0273 8.09859C13.2277 8.09859 14.4261 8.08656 15.6265 8.1026C17.0313 8.12063 17.5764 8.5535 17.7547 9.92624C17.9611 11.5214 17.9732 13.1286 17.7126 14.7218Z"
-                  fill="#363636"
-                />
-                <path
-                  d="M10.6506 13.842C11.6847 13.2969 12.6767 12.7758 13.7488 12.2107C12.6627 11.6396 11.6687 11.1185 10.6506 10.5854C10.6506 11.6937 10.6506 12.7418 10.6506 13.842Z"
-                  fill="#363636"
-                />
-              </svg>
-            </NuxtLink>
-          </li>
-          <li>
-            <NuxtLink>
-              <svg
-                width="24"
-                height="25"
-                viewBox="0 0 24 25"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12.0007 0.214844C5.37322 0.214844 0.000732422 5.58733 0.000732422 12.2148C0.000732422 18.8423 5.37322 24.2148 12.0007 24.2148C18.6282 24.2148 24.0007 18.8423 24.0007 12.2148C24.0007 5.58733 18.6282 0.214844 12.0007 0.214844ZM9.06321 17.1885H6.63321V9.36857H9.06321V17.1885ZM7.83321 8.40857C7.06571 8.40857 6.56946 7.86482 6.56946 7.19232C6.56946 6.50607 7.08071 5.97858 7.86446 5.97858C8.64821 5.97858 9.12821 6.50607 9.14321 7.19232C9.14321 7.86482 8.64821 8.40857 7.83321 8.40857ZM17.9382 17.1885H15.5082V12.8548C15.5082 11.8461 15.1557 11.1611 14.2769 11.1611C13.6057 11.1611 13.2069 11.6248 13.0307 12.0711C12.9657 12.2298 12.9494 12.4548 12.9494 12.6786V17.1873H10.5182V11.8623C10.5182 10.8861 10.487 10.0698 10.4545 9.36732H12.5657L12.6769 10.4536H12.7257C13.0457 9.94357 13.8294 9.19107 15.1407 9.19107C16.7394 9.19107 17.9382 10.2623 17.9382 12.5648V17.1885Z"
-                  fill="#363636"
-                />
-              </svg>
-            </NuxtLink>
-          </li>
-          <li>
-            <NuxtLink>
-              <svg
-                width="24"
-                height="25"
-                viewBox="0 0 24 25"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12.0002 0.214844C5.37344 0.214844 0.000244141 5.58804 0.000244141 12.2148C0.000244141 18.8416 5.37344 24.2148 12.0002 24.2148C18.627 24.2148 24.0002 18.8416 24.0002 12.2148C24.0002 5.58804 18.627 0.214844 12.0002 0.214844ZM17.7672 9.26035C17.7752 9.38625 17.7752 9.5175 17.7752 9.64607C17.7752 13.5782 14.7806 18.1076 9.30825 18.1076C7.62076 18.1076 6.05648 17.6175 4.73862 16.7737C4.97969 16.8005 5.21005 16.8112 5.45648 16.8112C6.84933 16.8112 8.12969 16.3398 9.15022 15.5416C7.84308 15.5148 6.74487 14.6577 6.36987 13.4791C6.8279 13.5461 7.2404 13.5461 7.71183 13.4255C7.03878 13.2888 6.43382 12.9232 5.99973 12.391C5.56565 11.8588 5.32921 11.1927 5.33059 10.5059V10.4684C5.72433 10.6907 6.18773 10.8273 6.67255 10.8461C6.26498 10.5744 5.93074 10.2065 5.69945 9.77472C5.46817 9.34298 5.34699 8.86085 5.34666 8.37107C5.34666 7.81661 5.4913 7.31036 5.75112 6.87107C6.49818 7.79072 7.43039 8.54288 8.48718 9.07865C9.54396 9.61443 10.7017 9.92183 11.885 9.98089C11.4645 7.95857 12.9752 6.32197 14.7913 6.32197C15.6484 6.32197 16.4198 6.6809 16.9636 7.25947C17.6359 7.13357 18.2788 6.88179 18.852 6.54429C18.6297 7.23268 18.1636 7.81393 17.5448 8.18089C18.1448 8.11661 18.7234 7.95054 19.2591 7.7175C18.8547 8.31214 18.3484 8.83982 17.7672 9.26035Z"
-                  fill="#363636"
-                />
-              </svg>
-            </NuxtLink>
-          </li>
-          <li>
-            <NuxtLink>
-              <svg
-                width="24"
-                height="25"
-                viewBox="0 0 24 25"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M12.0002 0.214844C18.6277 0.214844 24.0002 5.5874 24.0002 12.2148C24.0002 18.8423 18.6277 24.2148 12.0002 24.2148C5.3728 24.2148 0.000244141 18.8423 0.000244141 12.2148C0.000244141 5.5874 5.3728 0.214844 12.0002 0.214844ZM9.07403 5.35283H14.9268C17.1246 5.35283 18.922 7.12791 18.922 9.2964V15.1334C18.922 17.3024 17.1246 19.0769 14.9268 19.0769L9.07403 19.0768C6.87616 19.0768 5.07861 17.3023 5.07861 15.1333V9.29633C5.07861 7.12791 6.87616 5.35283 9.07403 5.35283ZM11.963 8.50951C14.0988 8.50951 15.8319 10.2427 15.8319 12.3784C15.8319 14.5144 14.0988 16.2473 11.963 16.2473C9.82664 16.2473 8.09382 14.5144 8.09382 12.3784C8.09382 10.2427 9.82671 8.50951 11.963 8.50951ZM11.963 9.81631C13.3773 9.81631 14.5252 10.9639 14.5252 12.3784C14.5252 13.793 13.3773 14.9408 11.963 14.9408C10.5482 14.9408 9.40055 13.7929 9.40055 12.3784C9.40055 10.9639 10.5482 9.81631 11.963 9.81631ZM15.706 7.97326C16.053 7.97326 16.3343 8.25456 16.3343 8.60117C16.3343 8.94814 16.053 9.22944 15.706 9.22944C15.3593 9.22944 15.0781 8.94814 15.0781 8.60117C15.0781 8.25449 15.3594 7.97326 15.706 7.97326ZM9.55232 6.47386H14.449C16.2876 6.47386 17.7913 7.97016 17.7913 9.79867V14.7199C17.7913 16.5483 16.2876 18.0444 14.449 18.0444L9.55232 18.0445C7.71366 18.0445 6.20966 16.5484 6.20966 14.7199V9.7986C6.20966 7.97016 7.71366 6.47386 9.55232 6.47386Z"
-                  fill="url(#paint0_linear_97_1713)"
-                />
-                <defs>
-                  <linearGradient
-                    id="paint0_linear_97_1713"
-                    x1="18.0132"
-                    y1="22.4049"
-                    x2="5.98721"
-                    y2="2.0247"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stop-color="#F58529" offset="" />
-                    <stop offset="0.169" stop-color="#FEDA77" />
-                    <stop offset="0.478" stop-color="#DD2A7B" />
-                    <stop offset="0.78" stop-color="#8134AF" />
-                    <stop offset="1" stop-color="#515BD4" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </NuxtLink>
-          </li>
-        </ul>
-      </div>
-
     </div>
-    <hr />
-    <h5 class="text-center font-light py-4">
-      Copyright @ 2022 Techfes. All rights reserved.
-    </h5>
+
+    <div class="container mx-auto px-4 py-12">
+      <!-- Main Footer Content - Two Column Layout -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <!-- Left Column with Logo, Description, and Philosophy -->
+        <div class="lg:col-span-5 space-y-10">
+          <!-- Logo and Company Info -->
+          <div>
+            <div class="flex items-center mb-6">
+              <img class="mr-3 h-10 w-10" src="@/assets/img/logo.png" alt="Logo" />
+              <h2 class="text-4xl font-bold text-gray-900">Techfes</h2>
+            </div>
+            <p class="text-gray-600 mb-6 lg:pr-12">
+              We're a passionate team of designers and developers creating exceptional digital experiences that drive growth and innovation for businesses worldwide.
+            </p>
+            
+            <!-- Social Media Links -->
+            <div class="flex space-x-4 mt-6">
+              <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 text-gray-600 hover:bg-primary hover:text-white transition-all duration-300">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                </svg>
+              </a>
+              <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 text-gray-600 hover:bg-primary hover:text-white transition-all duration-300">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </a>
+              <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 text-gray-600 hover:bg-primary hover:text-white transition-all duration-300">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/>
+                </svg>
+              </a>
+              <a href="#" class="w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 text-gray-600 hover:bg-primary hover:text-white transition-all duration-300">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Philosophy Card -->
+          <div class="philosophy-card p-6 bg-white rounded-xl shadow-md border border-gray-100 transform transition-all duration-500 hover:shadow-lg hover:scale-102">
+            <div class="flex items-center mb-4">
+              <span class="inline-block w-10 h-10 bg-primary/10 rounded-full mr-3 flex items-center justify-center text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M13.6,2.3C12.2,1.4,10.6,1,9,1C7.4,1,5.8,1.4,4.4,2.3C3,3.1,1.9,4.2,1.1,5.6C0.4,7,0,8.5,0,10.1
+                  c0,1.6,0.4,3.1,1.1,4.5c0.8,1.4,1.8,2.5,3.2,3.3c1.4,0.8,3,1.3,4.6,1.3c1.6,0,3.2-0.4,4.6-1.3c1.4-0.8,2.5-1.9,3.2-3.3
+                  c0.8-1.4,1.2-2.9,1.2-4.5c0-1.6-0.4-3.1-1.2-4.5C16.1,4.2,15,3.1,13.6,2.3z M15.9,13.4c-0.3,0.6-0.8,1-1.4,1.3
+                  c-0.6,0.3-1.3,0.5-2,0.5c-0.7,0-1.3-0.2-1.9-0.5c-0.6-0.3-1-0.8-1.4-1.3c-0.3-0.6-0.5-1.2-0.5-1.9c0-0.7,0.2-1.3,0.5-1.9
+                  c0.3-0.6,0.8-1,1.4-1.3c0.6-0.3,1.2-0.5,1.9-0.5c0.7,0,1.4,0.2,2,0.5c0.6,0.3,1.1,0.8,1.4,1.3c0.3,0.6,0.5,1.2,0.5,1.9
+                  C16.4,12.2,16.2,12.8,15.9,13.4z"></path>
+                </svg>
+              </span>
+              <h3 class="text-xl font-semibold text-gray-900">Our Philosophy</h3>
+            </div>
+            <p class="text-gray-700 relative philosophy-text leading-relaxed">
+              At Techfes, we believe in <span class="font-medium text-primary">innovation with purpose</span>. Every line of code we write and every design we create is guided by our commitment to excellence, user-centered thinking, and measurable impact for our clients.
+            </p>
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full animate-pulse-subtle">Innovation</span>
+              <span class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full animate-pulse-subtle" style="animation-delay: 0.5s">Excellence</span>
+              <span class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full animate-pulse-subtle" style="animation-delay: 1s">Transparency</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right Column with Navigation Links -->
+        <div class="lg:col-span-7">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- Quick Links -->
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-6 relative footer-heading">
+                Quick Links
+                <span class="absolute -bottom-2 left-0 w-10 h-0.5 bg-primary"></span>
+              </h3>
+              <ul class="space-y-3">
+                <li><NuxtLink to="/" class="footer-link">Home</NuxtLink></li>
+                <li><NuxtLink to="/about" class="footer-link">About Us</NuxtLink></li>
+                <li><NuxtLink to="/work" class="footer-link">Portfolio</NuxtLink></li>
+                <li><NuxtLink to="/process" class="footer-link">Our Process</NuxtLink></li>
+                <li><NuxtLink to="/contact-us" class="footer-link">Contact Us</NuxtLink></li>
+              </ul>
+            </div>
+            
+            <!-- Services -->
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-6 relative footer-heading">
+                Services
+                <span class="absolute -bottom-2 left-0 w-10 h-0.5 bg-primary"></span>
+              </h3>
+              <ul class="space-y-3">
+                <li><NuxtLink to="/service" class="footer-link">UI/UX Design</NuxtLink></li>
+                <li><NuxtLink to="/service" class="footer-link">Web Development</NuxtLink></li>
+                <li><NuxtLink to="/service" class="footer-link">Mobile Development</NuxtLink></li>
+                <li><NuxtLink to="/service" class="footer-link">Branding</NuxtLink></li>
+                <li><NuxtLink to="/service" class="footer-link">Digital Marketing</NuxtLink></li>
+              </ul>
+            </div>
+            
+            <!-- Contact Information -->
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-6 relative footer-heading">
+                Get in Touch
+                <span class="absolute -bottom-2 left-0 w-10 h-0.5 bg-primary"></span>
+              </h3>
+              <ul class="space-y-5">
+                <li class="flex items-start">
+                  <span class="inline-block mt-1 mr-3 text-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </span>
+                  <a href="mailto:hello@techfes.com" class="footer-link">hello@techfes.com</a>
+                </li>
+                <li class="flex items-start">
+                  <span class="inline-block mt-1 mr-3 text-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </span>
+                  <a href="tel:+8801234567890" class="footer-link">+880 1234 567890</a>
+                </li>
+                <li class="flex items-start">
+                  <span class="inline-block mt-1 mr-3 text-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </span>
+                  <span class="text-gray-600">House #29, 4th Floor, Road #12, Sector 11, Dhaka - 1230</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Newsletter Subscription -->
+          <div class="mt-12 p-6 bg-gray-50 rounded-xl">
+            <h3 class="text-lg font-semibold text-gray-900 mb-4">Stay Updated</h3>
+            <p class="text-gray-600 mb-6">Subscribe to our newsletter for the latest insights on design trends and tech innovation.</p>
+            <form class="flex flex-col sm:flex-row gap-3">
+              <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" />
+              <button type="submit" class="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-600 transition-colors duration-300">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Copyright Section -->
+    <div class="border-t border-gray-200 mt-12">
+      <div class="container mx-auto px-4 py-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-600 text-sm">
+            &copy; {{ new Date().getFullYear() }} Techfes. All rights reserved.
+          </p>
+          <div class="flex space-x-6 mt-4 md:mt-0">
+            <a href="#" class="text-gray-600 hover:text-primary text-sm transition-colors duration-300">Privacy Policy</a>
+            <a href="#" class="text-gray-600 hover:text-primary text-sm transition-colors duration-300">Terms of Service</a>
+            <a href="#" class="text-gray-600 hover:text-primary text-sm transition-colors duration-300">Sitemap</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
+
 <script setup lang="ts">
 import RollingArrow from "~/components/common/svg/RollingArrow.vue";
 import Arrow from "~/components/common/svg/Arrow.vue";
 </script>
+
+<style scoped>
+/* Philosophy Card Animations */
+.philosophy-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.philosophy-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transition: left 1s ease;
+}
+
+.philosophy-card:hover::before {
+  left: 100%;
+}
+
+.philosophy-text {
+  position: relative;
+}
+
+.philosophy-text::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(to right, var(--primary-color, #3900b4), transparent);
+  transition: width 0.6s ease;
+}
+
+.philosophy-card:hover .philosophy-text::after {
+  width: 100%;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s infinite ease-in-out;
+}
+
+/* Footer navigation link styling */
+.footer-link {
+  position: relative;
+  color: #4B5563;
+  display: inline-block;
+  padding: 2px 0;
+  transition: color 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.footer-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--primary-color, #3900b4);
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--primary-color, #3900b4);
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+
+/* Heading animation */
+.footer-heading {
+  position: relative;
+  padding-bottom: 0.75rem;
+  display: inline-block;
+}
+
+.footer-heading span {
+  transition: width 0.3s ease;
+  width: 30px;
+}
+
+.footer-heading:hover span {
+  width: 100%;
+}
+
+/* Hover scale */
+.hover\:scale-102:hover {
+  transform: scale(1.02);
+}
+</style>

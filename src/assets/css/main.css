@@ -9,6 +9,49 @@
 .absolute-vertical-center { @apply absolute left-[50%] translate-x-[-50%] }
 .absolute-horizontal-center { @apply absolute top-[50%] translate-y-[-50%] }
 
+/* Underline animation - centralized implementation */
+.animated-underline {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--primary-color);
+  font-weight: 500;
+  padding-bottom: 2px;
+}
+
+.animated-underline::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.animated-underline:hover::after {
+  width: 100%;
+}
+
+.animated-underline.center-underline::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.animated-underline.center-underline:hover::after {
+  width: 80%;
+}
+
+.animated-underline-arrow {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.animated-underline:hover .animated-underline-arrow {
+  transform: translateX(4px);
+}
 
 @layer base {
     :root {
